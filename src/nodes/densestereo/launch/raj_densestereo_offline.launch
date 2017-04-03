@@ -1,0 +1,19 @@
+<launch>
+	<arg name="calibFile" />
+
+	<arg name="worldFrame" value="/ptam_camera" />
+
+	<!-- <arg name="extraArgs" value="-g" /> -->
+	<arg name="extraArgs" value="" />
+
+	<!--<arg name="launchPrefix" value="gdb -ex run \-\-args" />-->
+	<!--<arg name="launchPrefix" value="gdb \-\-args" />-->
+	<!--<arg name="launchPrefix" value="valgrind" />-->
+	<arg name="launchPrefix" value="" />
+
+	<node pkg="nodelet" type="nodelet"
+		name="densestereo"
+		args="load densestereo/DenseStereoNodelet manager $(arg extraArgs) -s2 -r $(arg calibFile) -m96" output="screen" 
+		launch-prefix="$(arg launchPrefix)"
+	/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: capture
+Description: Description of capture
+Version: 0.0.1
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -lcapture_nodelet
+Requires: sensor_msgs libks libks_msgs

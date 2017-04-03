@@ -1,0 +1,22 @@
+<package>
+	<description brief="capture">
+
+		Captures mono, stereo or double-stereo video from Pointgrey firefly
+		cameras.
+
+	</description>
+	<author>Konstantin Schauwecker</author>
+	<license></license>
+	<review status="unreviewed" notes=""/>
+	<url></url>
+	
+	<depend package="sensor_msgs"/>
+	<depend package="roscpp"/>
+	<depend package="libks"/>
+	<depend package="nodelet"/>
+	<depend package="opencv2"/>
+	
+	<export>
+		<nodelet plugin="${prefix}/nodelet_plugins.xml" />
+	</export>
+</package>

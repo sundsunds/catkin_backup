@@ -1,0 +1,20 @@
+<launch>
+	<arg name="calibFile" value="/localhome/ait_jellal/calibration_stereo/calibFileFront_17102015.xml"/> <!-- /localhome/ait_jellal/calib_0907.txt" /-->
+
+	<arg name="worldFrame" value="/ptam_camera" />
+
+	<arg name="extraArgs" value="-g" />
+	<!-- <arg name="extraArgs" value="" /> -->
+
+	<!--<arg name="launchPrefix" value="gdb -ex run \-\-args" />-->
+	<!--<arg name="launchPrefix" value="gdb \-\-args" />-->
+	<!--<arg name="launchPrefix" value="valgrind" />-->
+	<arg name="launchPrefix" value="" />
+
+	<!-- node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"/-->
+	<node pkg="nodelet" type="nodelet"
+		name="densestereo"
+		args="load densestereo/DenseStereoNodelet manager -r $(arg calibFile) $(arg extraArgs) -s2 -m128" output="screen" 
+		launch-prefix="$(arg launchPrefix)"
+	/>
+</launch>

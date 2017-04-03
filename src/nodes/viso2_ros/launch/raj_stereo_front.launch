@@ -1,0 +1,29 @@
+<launch>
+
+	<!-- Arguments -->
+	<!-- arg name="bagfile" default="/media/ExHDD_1/datasets/viso2_ros/test.bag"  /--> <!-- Your bagfile here -->
+	<!--  <arg name="camera" default="/front_stereo" />  -->  <!-- The namespace where images are published -->
+	
+        <arg name="camera" default="/front_stereo" />
+         
+        <arg name="disparity_params" default="/media/ExHDD_1/datasets/viso2_ros/dis.yaml"/> <!-- Camera calibration parameters -->
+
+	<param name="/use_sim_time" value="false"/>
+
+	
+	<!-- Run the viso2_ros package -->
+	<node pkg="viso2_ros" type="stereo_odometer" name="stereo_odometer"  output="screen">
+		<remap from="stereo" to="$(arg camera)"/>
+		<remap from="image" to="image_rect"/>
+	</node>
+
+  <!--node pkg="viso2_ros" type="stereo_odometer" name="vo2" 
+      args="stereo:=stereo image:=image_rect _odom_frame_id:=/odom_combined _base_link_frame_id:=/base_footprint _publish_tf:=true">
+    <param name="approximate_sync" value="true" />
+
+		<remap from="stereo" to="$(arg camera)"/>
+		<remap from="image" to="image_rect"/>
+
+  </node-->
+	
+</launch>

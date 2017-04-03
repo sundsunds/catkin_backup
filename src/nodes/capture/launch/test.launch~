@@ -1,0 +1,11 @@
+<launch>
+	<arg name="autoShutterSettings" value="0.15,0.98,4" />
+	<node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"/>
+	<node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -s -H -a $(arg autoShutterSettings)" output="screen">
+
+	    <!-- <remap from="/capture" to="/camera/left/image_raw"/>  -->
+            <!-- <remap from="/capture::ImageSet[1]" to="/camera/right/image_raw"/>  -->
+        </node>
+
+
+</launch>

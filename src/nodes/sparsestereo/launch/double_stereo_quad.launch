@@ -1,0 +1,36 @@
+<launch>
+	<arg name="calibFront" />
+	<arg name="calibBottom" />
+	<!-- <arg name="calibFront" value="$(env HOME)/data/double1/calib-01-06-12/front/calib.xml" />
+ 	<arg name="calibBottom" value="$(env HOME)/data/double1/calib-01-06-12/bottom/calib.xml" /> -->
+
+	<arg name="worldFrame" value="/ptam_camera" />
+	<arg name="maxFeaturesFront" value="800" />
+	<arg name="maxFeaturesBottom" value="300" />
+
+	<!-- <arg name="extraArgs" value="-G" /> -->
+	<arg name="extraArgs" value="" />
+
+	<!-- <arg name="launchPrefix" value="gdb -ex run \-\-args" /> -->
+	<!-- <arg name="launchPrefix" value="gdb \-\-args" /> -->
+	<!-- <arg name="launchPrefix" value="valgrind" /> -->
+	<arg name="launchPrefix" value="" />
+
+	<node pkg="nodelet" type="nodelet"
+		name="sparsestereoFront"
+		args="load sparsestereo/SparseStereoNodelet manager -r $(arg calibFront) -M $(arg maxFeaturesFront) $(arg extraArgs) -C0,1 -W/ptamFront/camera -S" output="screen"
+		launch-prefix="$(arg launchPrefix)">
+		<remap from="/sparsestereo/points" to="/sparsestereoFront/points" />
+		<remap from="/sparsestereo/pyramid" to="/sparsestereoFront/pyramid" />
+	</node>
+	
+	<node pkg="nodelet" type="nodelet"
+		name="sparsestereoBottom"
+		args="load sparsestereo/SparseStereoNodelet manager -r $(arg calibBottom) -M $(arg maxFeaturesBottom) $(arg extraArgs) -C2,3 -W/ptamBottom/camera -S" output="screen"
+		launch-prefix="$(arg launchPrefix)">
+		<remap from="/sparsestereo/points" to="/sparsestereoBottom/points" />
+		<remap from="/sparsestereo/pyramid" to="/sparsestereoBottom/pyramid" />
+	</node>
+
+	<include file="$(find capture)/launch/capture_double_stereo.launch" />
+</launch>

@@ -1,0 +1,33 @@
+<package>
+  <name>apps</name>
+  <version>0.0.1</version>
+  <description>Various stand alone applications</description>
+
+  <license>GPL</license>
+  <author>Ait Jellal</author>
+  <maintainer email="radouane.ait-jellal@uni-tuebingen.de">Ait Jellal</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>libks</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>sensor_msgs</build_depend> 
+  <build_depend>opencv2</build_depend> 
+  <build_depend>rosconsole</build_depend>
+  <build_depend>octomap</build_depend> 
+
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>libks</run_depend>
+  <run_depend>rosbag</run_depend>
+  <run_depend>sensor_msgs</run_depend> 
+  <run_depend>opencv2</run_depend> 
+  <run_depend>rosconsole</run_depend>
+  <run_depend>octomap</run_depend> 
+
+</package>

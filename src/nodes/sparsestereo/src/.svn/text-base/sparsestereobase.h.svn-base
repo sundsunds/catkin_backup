@@ -1,0 +1,134 @@
+#include <ros/ros.h>
+#include <nodelet/nodelet.h>
+#include <string>
+#include <opencv2/opencv.hpp>
+#include <boost/scoped_ptr.hpp>
+#include <boost/thread.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <fstream>
+#include "libks/imageio/filequeue.h"
+#include "libks/imageproc/colorcoder.h"
+#include "libks/base/basewindow.h"
+#include "libks/stereo/correlation/censuswindow-inl.h"
+#include "libks/stereo/correlation/zsadwindow.h"
+#include "libks/stereo/dense/winnertakesall-inl.h"
+#include "libks/stereo/sparse/sparsestereo.h"
+#include "libks/stereo/sparse/sparseleftdenserightstereo-inl.h"
+#include "libks/stereo/sparse/densetosparse.h"
+#include "libks/stereo/dense/sparsecompletion.h"
+#include "libks/feature/faster.h"
+#include "libks/feature/extendedfast.h"
+#include "libks/feature/extendedfast3.h"
+#include "libks/feature/pyramidrangedetector.h"
+#include "libks/feature/harris.h"
+#include "libks/stereo/stereorectification.h"
+#include "libks/imageio/sharedimagesetpublisher.h"
+
+//#define SPARSE_LEFT_DENSE_RIGHT
+//#define DENSE_TO_SPARSE
+
+#define CENSUS_TRANSFORM
+//#define IMAGE_PYRAMID
+
+//#define HARRIS_CORNER // Use Harris instead of exFAST
+//#define FAST_CORNER // Use FAST instead of exFAST
+//#define EXTENDED_FAST	ks::ExtendedFAST
+#define EXTENDED_FAST	ks::ExtendedFAST3
+
+// Correlation method
+#define WINDOW_SIZE 5
+#define CORRELATION ks::CensusWindow<WINDOW_SIZE>
+//#define CORRELATION ks::ZSADWindow<WINDOW_SIZE>
+
+
+namespace sparsestereo {
+	class SparseStereoBase {
+	public:
+		SparseStereoBase();
+
+		// Performs general initializations
+		void onInit(int argc, char** argv, ros::NodeHandle* nh, std::string name);
+		
+		// Runs the processing loop
+		void mainLoop();
+
+	private:
+		std::string calibFile;
+		std::string inputDir;
+		std::string videoFile;
+		std::string pointsFile;
+		bool interactive;
+		bool rectify;
+		bool capture;
+		float uniqueness;
+		bool graphicalCV, graphicalSDL;
+		double maxDisp;
+		int leftRightStep;
+		bool performanceTest;
+		float adaptivity;
+		std::string writePath;
+		int camera1, camera2;
+		bool noROS;
+		int maxFeatures;
+		std::string worldFrame;
+		bool shared;
+		
+		int currentFrame;
+		std::fstream pointsFileStrm;
+		
+		std::string name;
+		boost::scoped_ptr<ros::NodeHandle> nodeHandle;
+		boost::scoped_ptr<ros::AsyncSpinner> spinner;
+		
+		boost::scoped_ptr<ks::BaseWindow> window;
+		boost::scoped_ptr<ks::StereoImageQueue8U> imgQueue;
+		ks::StereoFrame8U::ConstPtr stereoPair;
+		cv::Mat_<char> charLeft, charRight;
+		cv::Mat_<unsigned int> censusLeft, censusRight;
+		cv::Mat_<cv::Vec3b> screen;
+		boost::scoped_ptr<ks::ColorCoder> colCoder;
+		boost::scoped_ptr<cv::VideoWriter> video;
+		boost::scoped_ptr<ks::StereoRectification> rectification;
+
+		boost::scoped_ptr<ros::Publisher> stereoPublisher;
+		boost::scoped_ptr<ks::SharedImageSetPublisher> pyramidPublisher;
+		ros::Time messageTime;
+		bool rosInput;
+		
+		std::vector<cv::KeyPoint> keypointsLeft, keypointsLeftUnreduced, keypointsRight;
+		boost::shared_ptr<cv::FeatureDetector> leftFeatureDetector, rightFeatureDetector;
+		boost::scoped_ptr<ks::SparseCompletion> sparseCompletion;
+		
+	#ifdef SPARSE_LEFT_DENSE_RIGHT
+		boost::scoped_ptr<ks::SparseLeftDenseRightStereo<CORRELATION, short> > stereo;
+	#elif defined DENSE_TO_SPARSE
+		boost::scoped_ptr<ks::DenseToSparse<ks::WinnerTakesAll<CORRELATION, unsigned int /*pixel type*/> > > stereo;
+	#else
+		boost::scoped_ptr<ks::SparseStereo<CORRELATION, short > > stereo;
+	#endif
+	
+		// Parses all program options
+		bool parseOptions(int argc, char** argv);
+		
+		// Write matched points to file
+		void writePoints(const std::vector<ks::SparseMatch>& points);
+		
+		// Reads the next stereo pair and stores it in a member variable
+		bool readStereoPair();
+		
+		// Displays the matches as colored boxes
+		void visualizeMatches(const ks::StereoFrame8U::Type& pair, const std::vector<ks::SparseMatch>& correspondences);
+		
+		// Extracts feature points
+		void extractFeatures(const ks::StereoFrame8U::Type& rectPair);
+		
+		// Performs subpixel refinement of matched stereo points
+		void subpixelRefine(const ks::StereoFrame8U::Type& rectPair, std::vector<ks::SparseMatch>* matches);
+		
+		// Publishes the stereo matches through ROS
+		void publishMatches(const std::vector<ks::SparseMatch>& matches);
+		
+		// Publishes the image pyramid of the scale space
+		void publishPyramid(const ks::StereoFrame8U::Type& stereoPair);
+	};
+}

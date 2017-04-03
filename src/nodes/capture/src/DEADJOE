@@ -1,0 +1,26 @@
+
+*** These modified files were found in JOE when it aborted on Mon Mar 24 16:53:31 2014
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+dense
+dense
+tf
+worldFr
+world
+world
+broad
+trigger
+
+*** File '(Unnamed)'
+ptam_stereo_planepose_offline.launch
+StereoPTAMNodelet.cpp
+ptam_stereo_planepose_offline.launch
+src/
+sparsestereobase.h
+build.sh
+common.cmake
+flycapqueue.cpp
+flycapqueue.cpp
+CMakeLists.txt
+capturebase.cpp

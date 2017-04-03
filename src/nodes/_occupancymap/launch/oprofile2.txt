@@ -1,0 +1,1261 @@
+CPU: Intel Architectural Perfmon, speed 1200 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        app name                 symbol name
+109324   21.8616  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::computeDisparity(std::vector<Elas::support_pt, std::allocator<Elas::support_pt> >, std::vector<Elas::triangle, std::allocator<Elas::triangle> >, int*, int*, unsigned char*, unsigned char*, bool, float*)
+92002    18.3977  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::computeRayKeys(octomath::Vector3 const&, octomath::Vector3 const&, octomath::Vector3 const&, double)
+42463     8.4913  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::computeSupportMatches(unsigned char*, unsigned char*)
+38258     7.6505  no-vmlinux               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /no-vmlinux
+22016     4.4025  libopencv_imgproc.so.2.4.2 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/libopencv_imgproc.so.2.4.2
+20133     4.0260  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::adaptiveMean(float*)
+16884     3.3763  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::computeUpdate(octomap::Pointcloud const&, octomath::Vector3 const&, octomath::Vector3 const&, double)
+15204     3.0404  no-vmlinux               /no-vmlinux              /no-vmlinux
+12079     2.4154  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Descriptor::createDescriptor(unsigned char*, unsigned char*, int, int, int, int)
+12003     2.4002  python2.7                /usr/bin/python2.7       /usr/bin/python2.7
+9577      1.9151  no-vmlinux               /usr/bin/python2.7       /no-vmlinux
+8992      1.7981  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::removeSmallSegments(float*)
+6015      1.2028  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::removeInconsistentSupportPoints(short*, int, int)
+5418      1.0834  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::leftRightConsistencyCheck(float*, float*)
+5114      1.0226  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<OccPrevKey, OccPrevKey, std::allocator<OccPrevKey>, std::_Identity<OccPrevKey>, OccPrevKey::KeyEqual, OccPrevKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, true, true>::find(OccPrevKey const&)
+4488      0.8975  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Matrix::solve(Matrix const&, double)
+3579      0.7157  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Quaternion::operator*(octomath::Quaternion const&) const
+3372      0.6743  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZNK7octomap14OcTreeBaseImplIN12occupancymap16RobustOcTreeNodeENS_14AbstractOcTreeEE6searchERKNS_9OcTreeKeyEj.constprop.571
+3164      0.6327  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _int_free
+2913      0.5825  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<octomap::OcTreeKey, std::pair<octomap::OcTreeKey const, float>, std::allocator<std::pair<octomap::OcTreeKey const, float> >, std::_Select1st<std::pair<octomap::OcTreeKey const, float> >, std::equal_to<octomap::OcTreeKey>, octomap::OcTreeKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, false, true>::find(octomap::OcTreeKey const&)
+2740      0.5479  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet malloc
+2693      0.5385  libopencv_calib3d.so.2.4.2 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/libopencv_calib3d.so.2.4.2
+2334      0.4667  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet filter::detail::convolve_cols_3x3(unsigned char const*, short*, short*, int, int)
+2281      0.4561  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _int_malloc
+2171      0.4341  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::calcVisibilities(octomath::Vector3 const&)
+2147      0.4293  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::createGrid(std::vector<Elas::support_pt, std::allocator<Elas::support_pt> >, int*, int*, bool)
+1984      0.3967  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::gapInterpolation(float*)
+1836      0.3671  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memcpy_ssse3_back
+1813      0.3625  libstdc++.so.6.0.16      /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+1796      0.3591  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::OccupancyMapNodelet::disparityMapToScan(cv::Mat_<float> const&)
+1345      0.2690  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memset_sse2
+1301      0.2602  no-vmlinux               /usr/bin/Xorg            /no-vmlinux
+1233      0.2466  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet incircle(mesh*, behavior*, float*, float*, float*, float*)
+1137      0.2274  no-vmlinux               /usr/bin/oprofiled       /no-vmlinux
+1110      0.2220  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet vertexmedian(float**, int, int, int)
+1066      0.2132  libroscpp.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/libroscpp.so
+1031      0.2062  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Quaternion::rotate(octomath::Vector3 const&) const
+997       0.1994  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet mergehulls(mesh*, behavior*, otri*, otri*, otri*, otri*, int)
+972       0.1944  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet filter::detail::convolve_121_row_3x3_16bit(short const*, unsigned char*, int, int)
+927       0.1854  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::__detail::_Map_base<octomap::OcTreeKey, std::pair<octomap::OcTreeKey const, float>, std::_Select1st<std::pair<octomap::OcTreeKey const, float> >, true, std::tr1::_Hashtable<octomap::OcTreeKey, std::pair<octomap::OcTreeKey const, float>, std::allocator<std::pair<octomap::OcTreeKey const, float> >, std::_Select1st<std::pair<octomap::OcTreeKey const, float> >, std::equal_to<octomap::OcTreeKey>, octomap::OcTreeKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, false, true> >::operator[](octomap::OcTreeKey const&)
+904       0.1808  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Pose6D::transform(octomath::Vector3 const&) const
+877       0.1754  liboctomap.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomap::Pointcloud::Pointcloud(octomap::Pointcloud const&)
+838       0.1676  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::updateNodeRecurs(occupancymap::RobustOcTreeNode*, float, bool, octomap::OcTreeKey const&, unsigned int, float, bool)
+818       0.1636  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Quaternion::Quaternion(float, float, float, float)
+789       0.1578  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZNSt3tr110_HashtableI10OccPrevKeyS1_SaIS1_ESt9_IdentityIS1_ENS1_8KeyEqualENS1_7KeyHashENS_8__detail18_Mod_range_hashingENS7_20_Default_ranged_hashENS7_20_Prime_rehash_policyELb0ELb1ELb1EE19_M_deallocate_nodesEPPNS7_10_Hash_nodeIS1_Lb0EEEm.isra.299
+782       0.1564  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::StereoRectification::initEpilines()
+774       0.1548  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet do_lookup_x
+762       0.1524  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet filter::detail::convolve_101_row_3x3_16bit(short const*, unsigned char*, int, int)
+660       0.1320  librosbag.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/librosbag.so
+634       0.1268  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<octomath::Vector3, std::allocator<octomath::Vector3> >::_M_insert_aux(__gnu_cxx::__normal_iterator<octomath::Vector3*, std::vector<octomath::Vector3, std::allocator<octomath::Vector3> > >, octomath::Vector3 const&)
+607       0.1214  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet counterclockwise(mesh*, behavior*, float*, float*, float*)
+601       0.1202  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::removeRedundantSupportPoints(short*, int, int, int, int, bool)
+546       0.1092  libcompiz_core.so.0.9.7.12 /usr/bin/compiz          /usr/lib/libcompiz_core.so.0.9.7.12
+543       0.1086  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet free
+543       0.1086  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZN6filter6detail20unpack_8bit_to_16bitEDv2_xRS1_S2_
+534       0.1068  no-vmlinux               /usr/bin/compiz          /no-vmlinux
+505       0.1010  Xorg                     /usr/bin/Xorg            /usr/bin/Xorg
+495       0.0990  oprofiled                /usr/bin/oprofiled       /usr/bin/oprofiled
+490       0.0980  libvte2_90.so.9.3200.1   /usr/bin/gnome-terminal  /usr/lib/libvte2_90.so.9.3200.1
+473       0.0946  liboctomap.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomap::Pointcloud::transform(octomath::Pose6D)
+467       0.0934  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Quaternion::operator*(octomath::Vector3 const&) const
+433       0.0866  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZNSt3tr110_HashtableIN7octomap9OcTreeKeyESt4pairIKS2_fESaIS5_ESt10_Select1stIS5_ESt8equal_toIS2_ENS2_7KeyHashENS_8__detail18_Mod_range_hashingENSC_20_Default_ranged_hashENSC_20_Prime_rehash_policyELb0ELb0ELb1EE19_M_deallocate_nodesEPPNSC_10_Hash_nodeIS5_Lb0EEEm.isra.290
+426       0.0852  libopengl.so             /usr/bin/compiz          /usr/lib/compiz/libopengl.so
+384       0.0768  libdrm_intel.so.1.0.0    /usr/bin/Xorg            /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+377       0.0754  libc-2.15.so             /usr/bin/compiz          _int_malloc
+370       0.0740  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet randomnation(unsigned int)
+365       0.0730  libglib-2.0.so.0.3200.3  /usr/bin/gnome-terminal  /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+338       0.0676  libcairo.so.2.11000.2    /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libcairo.so.2.11000.2
+336       0.0672  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<OccPrevKey, OccPrevKey, std::allocator<OccPrevKey>, std::_Identity<OccPrevKey>, OccPrevKey::KeyEqual, OccPrevKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, true, true>::_M_insert(OccPrevKey const&, std::tr1::integral_constant<bool, true>)
+328       0.0656  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet vertexsort(float**, int)
+314       0.0628  libc-2.15.so             /usr/bin/python2.7       _int_malloc
+314       0.0628  intel_drv.so             /usr/bin/Xorg            /usr/lib/xorg/modules/drivers/intel_drv.so
+299       0.0598  libfade.so               /usr/bin/compiz          /usr/lib/compiz/libfade.so
+295       0.0590  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+292       0.0584  no-vmlinux               /opt/ros/fuerte/share/rosout/bin/rosout /no-vmlinux
+262       0.0524  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet roundf
+257       0.0514  librospack.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/librospack.so
+256       0.0512  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memcmp_sse4_1
+256       0.0512  no-vmlinux               /usr/bin/gnome-terminal  /no-vmlinux
+255       0.0510  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<OccPrevKey, OccPrevKey, std::allocator<OccPrevKey>, std::_Identity<OccPrevKey>, OccPrevKey::KeyEqual, OccPrevKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, true, true>::_M_insert_bucket(OccPrevKey const&, unsigned long, unsigned long)
+245       0.0490  libcomposite.so          /usr/bin/compiz          /usr/lib/compiz/libcomposite.so
+234       0.0468  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet memchr
+224       0.0448  libc-2.15.so             /usr/bin/python2.7       __memcpy_ssse3_back
+218       0.0436  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_lookup_symbol_x
+215       0.0430  libdricore.so            /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/dri/libdricore.so
+200       0.0400  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomap::OcTreeDataNode<float>::collapsible() const
+192       0.0384  no-vmlinux               /bin/dash                /no-vmlinux
+190       0.0380  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_relocate_object
+188       0.0376  i965_dri.so              /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+187       0.0374  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::computeDisparityPlanes(std::vector<Elas::support_pt, std::allocator<Elas::support_pt> >, std::vector<Elas::triangle, std::allocator<Elas::triangle> >&, int)
+183       0.0366  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet scale_expansion_zeroelim(int, float*, float, float*)
+176       0.0352  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<octomap::OcTreeKey, std::pair<octomap::OcTreeKey const, float>, std::allocator<std::pair<octomap::OcTreeKey const, float> >, std::_Select1st<std::pair<octomap::OcTreeKey const, float> >, std::equal_to<octomap::OcTreeKey>, octomap::OcTreeKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, false, true>::_M_insert_bucket(std::pair<octomap::OcTreeKey const, float> const&, unsigned long, unsigned long)
+175       0.0350  libc-2.15.so             /usr/bin/python2.7       _int_free
+165       0.0330  no-vmlinux               /usr/bin/du              /no-vmlinux
+162       0.0324  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fread
+152       0.0304  no-vmlinux               /usr/sbin/nscd           /no-vmlinux
+148       0.0296  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::computeDelaunayTriangulation(std::vector<Elas::support_pt, std::allocator<Elas::support_pt> >, int)
+148       0.0296  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Elas::process(unsigned char*, unsigned char*, float*, float*, int const*)
+148       0.0296  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet filter::detail::pack_16bit_to_8bit_saturate(long long __vector, long long __vector, long long __vector&)
+140       0.0280  libc-2.15.so             /usr/bin/python2.7       malloc
+137       0.0274  libboost_thread.so.1.46.1 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libboost_thread.so.1.46.1
+132       0.0264  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::insertPointCloud(octomap::Pointcloud const&, octomath::Vector3 const&, octomath::Vector3 const&, double, bool)
+130       0.0260  libc-2.15.so             /usr/bin/python2.7       __strncpy_sse2_unaligned
+126       0.0252  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet divconqrecurse(mesh*, behavior*, float**, int, int, otri*, otri*)
+122       0.0244  libglib-2.0.so.0.3200.3  /usr/bin/ibus-daemon     /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+118       0.0236  libglib-2.0.so.0.3200.3  /usr/bin/compiz          /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+116       0.0232  libunityshell.so         /usr/bin/compiz          /usr/lib/compiz/libunityshell.so
+113       0.0226  libgobject-2.0.so.0.3200.3 /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+112       0.0224  libc-2.15.so             /usr/bin/compiz          _int_free
+110       0.0220  libc-2.15.so             /usr/bin/python2.7       __strlen_sse2_pminub
+110       0.0220  libc-2.15.so             /usr/bin/python2.7       malloc_consolidate.part.3
+108       0.0216  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<Elas::triangle, std::allocator<Elas::triangle> >::_M_insert_aux(__gnu_cxx::__normal_iterator<Elas::triangle*, std::vector<Elas::triangle, std::allocator<Elas::triangle> > >, Elas::triangle const&)
+105       0.0210  libX11.so.6.3.0          /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+103       0.0206  libroscpp.so             /opt/ros/fuerte/share/rosout/bin/rosout /opt/ros/fuerte/lib/libroscpp.so
+103       0.0206  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::StereoRectification::initPointRectMap()
+97        0.0194  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string> >, std::less<std::string>, std::allocator<std::pair<std::string const, std::string> > >::_M_erase(std::_Rb_tree_node<std::pair<std::string const, std::string> >*)
+96        0.0192  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_mutex_lock
+96        0.0192  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet writeelements(mesh*, behavior*, int**, float**)
+94        0.0188  libc-2.15.so             /usr/bin/python2.7       vfprintf
+93        0.0186  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet strcmp
+91        0.0182  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __ieee754_log_sse2
+91        0.0182  libopencv_core.so.2.4.2  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/libopencv_core.so.2.4.2
+90        0.0180  libc-2.15.so             /usr/bin/python2.7       __memcmp_sse4_1
+90        0.0180  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __ieee754_exp_sse2
+88        0.0176  libc-2.15.so             /usr/bin/compiz          malloc
+88        0.0176  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet maketriangle(mesh*, behavior*, otri*)
+87        0.0174  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_compile_internal
+82        0.0164  libxmlrpcpp.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/libxmlrpcpp.so
+77        0.0154  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet malloc_consolidate.part.3
+77        0.0154  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet incircleadapt(float*, float*, float*, float*, float)
+76        0.0152  libc-2.15.so             /usr/bin/compiz          malloc_consolidate.part.3
+75        0.0150  dbus-daemon              /bin/dbus-daemon         /bin/dbus-daemon
+74        0.0148  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::updateNode(octomap::OcTreeKey const&, float, float, bool)
+74        0.0148  libgtk-3.so.0.400.2      /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.400.2
+73        0.0146  libgdk-3.so.0.400.2      /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.400.2
+72        0.0144  no-vmlinux               /usr/lib/udisks/udisks-daemon /no-vmlinux
+70        0.0140  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memcpy_sse2
+68        0.0136  libc-2.15.so             /usr/bin/python2.7       realloc
+64        0.0128  libc-2.15.so             /usr/bin/oprofiled       _IO_vfscanf
+64        0.0128  libc-2.15.so             /usr/lib/udisks/udisks-daemon _int_malloc
+63        0.0126  librostime.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/librostime.so
+59        0.0118  libpangoft2-1.0.so.0.3000.0 /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3000.0
+57        0.0114  libc-2.15.so             /usr/bin/python2.7       __ctype_b_loc
+57        0.0114  libdbus-1.so.3.5.8       /usr/bin/compiz          /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+56        0.0112  libc-2.15.so             /usr/bin/compiz          build_trtable
+56        0.0112  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_mutex_unlock
+56        0.0112  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet transfernodes(mesh*, behavior*, float*, float*, int*, int, int)
+55        0.0110  libexpat.so.1.5.2        /usr/bin/python2.7       /lib/x86_64-linux-gnu/libexpat.so.1.5.2
+55        0.0110  libpthread-2.15.so       /usr/bin/python2.7       sem_wait
+55        0.0110  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet poolalloc(memorypool*)
+53        0.0106  libgio-2.0.so.0.3200.3   /usr/bin/ibus-daemon     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+53        0.0106  libgobject-2.0.so.0.3200.3 /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+52        0.0104  libpixman-1.so.0.24.4    /usr/bin/Xorg            /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.24.4
+51        0.0102  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet check_match.11236
+50        0.0100  libc-2.15.so             /usr/lib/udisks/udisks-daemon malloc
+49        0.0098  libpthread-2.15.so       /usr/bin/python2.7       __errno_location
+48        0.0096  libc-2.15.so             /usr/bin/gnome-terminal  __memcpy_sse2
+48        0.0096  libc-2.15.so             /usr/bin/gnome-terminal  _int_malloc
+48        0.0096  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_cond_timedwait@@GLIBC_2.3.2
+48        0.0096  libdecor.so              /usr/bin/compiz          /usr/lib/compiz/libdecor.so
+47        0.0094  no-vmlinux               /bin/dbus-daemon         /no-vmlinux
+47        0.0094  libdrm_intel.so.1.0.0    /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+46        0.0092  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::shared_count::~shared_count()
+45        0.0090  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_xsgetn
+45        0.0090  no-vmlinux               /usr/bin/ibus-daemon     /no-vmlinux
+45        0.0090  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet traverse(memorypool*)
+45        0.0090  libnux-2.0.so.0.1401.0   /usr/bin/compiz          /usr/lib/libnux-2.0.so.0.1401.0
+44        0.0088  libc-2.15.so             /usr/bin/gnome-terminal  __memcpy_ssse3_back
+44        0.0088  libc-2.15.so             /usr/lib/udisks/udisks-daemon _int_free
+44        0.0088  no-vmlinux               /usr/lib/udisks/udisks-helper-ata-smart-collect /no-vmlinux
+43        0.0086  libdbus-1.so.3.5.8       /usr/lib/udisks/udisks-daemon /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+42        0.0084  libc-2.15.so             /usr/bin/python2.7       __memmove_sse2
+42        0.0084  libpthread-2.15.so       /usr/bin/python2.7       sem_post
+41        0.0082  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet divconqdelaunay(mesh*, behavior*)
+41        0.0082  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fast_expansion_sum_zeroelim(int, float*, int, float*, float*)
+41        0.0082  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet vertextraverse(mesh*)
+39        0.0078  libc-2.15.so             /usr/bin/python2.7       free
+38        0.0076  libgobject-2.0.so.0.3200.3 /usr/bin/ibus-daemon     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+38        0.0076  libstdc++.so.6.0.16      /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+37        0.0074  libcrypto.so.1.0.0       /usr/bin/python2.7       /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+37        0.0074  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<OccPrevKey, std::allocator<OccPrevKey> >::_M_fill_insert(__gnu_cxx::__normal_iterator<OccPrevKey*, std::vector<OccPrevKey, std::allocator<OccPrevKey> > >, unsigned long, OccPrevKey const&)
+36        0.0072  libc-2.15.so             /usr/bin/python2.7       _IO_default_xsputn
+35        0.0070  libc-2.15.so             /usr/bin/python2.7       __memset_sse2
+34        0.0068  libpixman-1.so.0.24.4    /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.24.4
+32        0.0064  libc-2.15.so             /usr/bin/compiz          __memset_sse2
+32        0.0064  libc-2.15.so             /usr/bin/python2.7       readdir
+32        0.0064  libGL.so.1.2             /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2
+31        0.0062  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strlen_sse2_pminub
+30        0.0060  no-vmlinux               /usr/lib/gvfs/gvfs-gdu-volume-monitor /no-vmlinux
+30        0.0060  liblog4cxx.so.10.0.0     /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/liblog4cxx.so.10.0.0
+29        0.0058  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet alternateaxes(float**, int, int)
+28        0.0056  librostime.so            /opt/ros/fuerte/share/rosout/bin/rosout /opt/ros/fuerte/lib/librostime.so
+28        0.0056  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet triangletraverse(mesh*)
+27        0.0054  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_fixup
+27        0.0054  libc-2.15.so             /usr/bin/compiz          re_compile_internal
+27        0.0054  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet writenodes(mesh*, behavior*, float**, float**, int**)
+26        0.0052  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __libc_disable_asynccancel
+26        0.0052  libc-2.15.so             /usr/bin/Xorg            _int_malloc
+26        0.0052  libc-2.15.so             /usr/bin/compiz          __memcpy_ssse3_back
+26        0.0052  libc-2.15.so             /usr/bin/gnome-terminal  _int_free
+25        0.0050  libc-2.15.so             /usr/bin/compiz          free
+25        0.0050  libxcb.so.1.1.0          /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+24        0.0048  libglib-2.0.so.0.3200.3  /usr/lib/udisks/udisks-daemon /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+24        0.0048  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet counterclockwiseadapt(float*, float*, float*, float)
+24        0.0048  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<octomap::OcTreeKey, std::allocator<octomap::OcTreeKey> >::_M_fill_insert(__gnu_cxx::__normal_iterator<octomap::OcTreeKey*, std::vector<octomap::OcTreeKey, std::allocator<octomap::OcTreeKey> > >, unsigned long, octomap::OcTreeKey const&)
+24        0.0048  libgio-2.0.so.0.3200.3   /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+23        0.0046  libc-2.15.so             /usr/bin/python2.7       __strchr_sse42
+23        0.0046  libc-2.15.so             /usr/bin/python2.7       __xstat
+23        0.0046  libc-2.15.so             /usr/lib/udisks/udisks-daemon calc_eclosure_iter
+23        0.0046  libc-2.15.so             /usr/lib/udisks/udisks-daemon parse_expression
+23        0.0046  libglib-2.0.so.0.3200.3  /usr/lib/bamf/bamfdaemon /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+22        0.0044  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __tzfile_compute
+22        0.0044  libc-2.15.so             /usr/bin/python2.7       __strlen_sse2
+22        0.0044  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __ieee754_pow_sse2
+22        0.0044  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_getspecific
+22        0.0044  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<octomap::KeyRay, std::allocator<octomap::KeyRay> >::_M_fill_insert(__gnu_cxx::__normal_iterator<octomap::KeyRay*, std::vector<octomap::KeyRay, std::allocator<octomap::KeyRay> > >, unsigned long, octomap::KeyRay const&)
+22        0.0044  libboost_thread.so.1.46.1 /opt/ros/fuerte/share/rosout/bin/rosout /usr/lib/libboost_thread.so.1.46.1
+21        0.0042  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __offtime
+21        0.0042  libdbus-1.so.3.5.8       /usr/bin/gnome-terminal  /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+21        0.0042  libpthread-2.15.so       /usr/bin/compiz          pthread_mutex_lock
+21        0.0042  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::OccupancyMapNodelet::processBag()
+20        0.0040  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_map_object
+20        0.0040  libc-2.15.so             /usr/bin/python2.7       __strcmp_sse42
+20        0.0040  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_mutex_lock
+20        0.0040  libboost_signals.so.1.46.1 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libboost_signals.so.1.46.1
+20        0.0040  libnux-graphics-2.0.so.0.1401.0 /usr/bin/compiz          /usr/lib/libnux-graphics-2.0.so.0.1401.0
+20        0.0040  libgobject-2.0.so.0.3200.3 /usr/lib/udisks/udisks-daemon /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+20        0.0040  [vdso]                   (tgid:22240 range:0x7fffcabff000-0x7fffcac00000) /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet [vdso] (tgid:22240 range:0x7fffcabff000-0x7fffcac00000)
+19        0.0038  libc-2.15.so             /usr/bin/compiz          vfprintf
+19        0.0038  libX11.so.6.3.0          /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+18        0.0036  libc-2.15.so             /usr/bin/python2.7       _int_realloc
+18        0.0036  libc-2.15.so             /usr/lib/udisks/udisks-daemon link_nfa_nodes
+18        0.0036  libc-2.15.so             /usr/lib/udisks/udisks-daemon malloc_consolidate.part.3
+18        0.0036  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_dfa_add_node
+18        0.0036  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_once
+18        0.0036  no-vmlinux               /usr/lib/gnome-settings-daemon/gnome-settings-daemon /no-vmlinux
+18        0.0036  libgdk-3.so.0.400.2      /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.400.2
+17        0.0034  ld-2.15.so               /usr/bin/python2.7       do_lookup_x
+17        0.0034  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strcmp_sse42
+17        0.0034  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strncasecmp_l_sse42
+17        0.0034  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ftello
+17        0.0034  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet vfprintf
+17        0.0034  libc-2.15.so             /usr/bin/gnome-terminal  malloc
+17        0.0034  libnux-core-2.0.so.0.1401.0 /usr/bin/compiz          /usr/lib/libnux-core-2.0.so.0.1401.0
+16        0.0032  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fseeko
+16        0.0032  libdbus-1.so.3.5.8       /usr/bin/python2.7       /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+16        0.0032  libglib-2.0.so.0.3200.3  /usr/lib/gvfs/gvfs-gdu-volume-monitor /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+16        0.0032  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __pthread_mutex_cond_lock
+16        0.0032  libxmlrpcpp.so           /opt/ros/fuerte/share/rosout/bin/rosout /opt/ros/fuerte/lib/libxmlrpcpp.so
+16        0.0032  libboost_program_options.so.1.46.1 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libboost_program_options.so.1.46.1
+16        0.0032  libgdu.so.0.0.0          /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libgdu.so.0.0.0
+15        0.0030  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_map_object_deps
+15        0.0030  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_seekoff@@GLIBC_2.2.5
+15        0.0030  libc-2.15.so             /usr/bin/python2.7       __memcpy_sse2
+15        0.0030  libc-2.15.so             /usr/bin/python2.7       __openat_nocancel
+15        0.0030  libc-2.15.so             /usr/bin/python2.7       __vsnprintf_chk
+15        0.0030  no-vmlinux               /usr/sbin/ntpd           /no-vmlinux
+15        0.0030  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet densestereo::DenseStereoNodelet::mainLoop()
+15        0.0030  libXrender.so.1.3.0      /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+15        0.0030  libstdc++.so.6.0.16      /opt/ros/fuerte/share/rosout/bin/rosout /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+14        0.0028  libc-2.15.so             /bin/dash                _dl_addr
+14        0.0028  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __libc_enable_asynccancel
+14        0.0028  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __lseek_nocancel
+14        0.0028  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nodelet::detail::CallbackQueueManager::managerThread()
+14        0.0028  du                       /usr/bin/du              /usr/bin/du
+14        0.0028  libboost_filesystem.so.1.46.1 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libboost_filesystem.so.1.46.1
+14        0.0028  libflycapture.so.2.2.3.14 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libflycapture.so.2.2.3.14
+14        0.0028  libgobject-2.0.so.0.3200.3 /usr/lib/gnome-disk-utility/gdu-notification-daemon /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+14        0.0028  libxcb.so.1.1.0          /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+14        0.0028  [vdso]                   (tgid:19292 range:0x7fff189ff000-0x7fff18a00000) /usr/bin/Xorg            [vdso] (tgid:19292 range:0x7fff189ff000-0x7fff18a00000)
+13        0.0026  dash                     /bin/dash                /bin/dash
+13        0.0026  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_name_match_p
+13        0.0026  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_sgetn
+13        0.0026  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet calloc
+13        0.0026  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet poll
+13        0.0026  libc-2.15.so             /usr/bin/compiz          pthread_mutex_lock
+13        0.0026  libc-2.15.so             /usr/bin/python2.7       __select_nocancel
+13        0.0026  libc-2.15.so             /usr/bin/python2.7       strchrnul
+13        0.0026  libm-2.15.so             /usr/bin/python2.7       __floor_sse41
+13        0.0026  libpthread-2.15.so       /usr/bin/compiz          pthread_mutex_unlock
+13        0.0026  libpthread-2.15.so       /usr/bin/ibus-daemon     pthread_mutex_lock
+13        0.0026  no-vmlinux               /usr/bin/file            /no-vmlinux
+13        0.0026  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_p<libks::SharedImageSet_<std::allocator<void> > >::dispose()
+13        0.0026  libwall.so               /usr/bin/compiz          /usr/lib/compiz/libwall.so
+13        0.0026  libtinyxml.so.2.6.2      /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libtinyxml.so.2.6.2
+13        0.0026  libgobject-2.0.so.0.3200.3 /usr/lib/gvfs/gvfs-gdu-volume-monitor /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+13        0.0026  libgtk-3.so.0.400.2      /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.400.2
+12        0.0024  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_map_object_from_fd
+12        0.0024  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout pthread_mutex_lock
+12        0.0024  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __tz_convert
+12        0.0024  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet posix_memalign
+12        0.0024  libc-2.15.so             /usr/bin/compiz          re_search_internal
+12        0.0024  libc-2.15.so             /usr/bin/python2.7       __libc_disable_asynccancel
+12        0.0024  libc-2.15.so             /usr/bin/python2.7       __opendirat
+12        0.0024  libc-2.15.so             /usr/lib/udisks/udisks-daemon free
+12        0.0024  libglib-2.0.so.0.3200.3  /usr/lib/gnome-settings-daemon/gnome-settings-daemon /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+12        0.0024  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout pthread_cond_timedwait@@GLIBC_2.3.2
+12        0.0024  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<Elas::support_pt, std::allocator<Elas::support_pt> >::_M_insert_aux(__gnu_cxx::__normal_iterator<Elas::support_pt*, std::vector<Elas::support_pt, std::allocator<Elas::support_pt> > >, Elas::support_pt const&)
+12        0.0024  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet cv::Mat::~Mat()
+12        0.0024  ibus-daemon              /usr/bin/ibus-daemon     /usr/bin/ibus-daemon
+12        0.0024  libgio-2.0.so.0.3200.3   /usr/lib/bamf/bamfdaemon /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+12        0.0024  libgobject-2.0.so.0.3200.3 /usr/lib/bamf/bamfdaemon /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+11        0.0022  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_vfscanf
+11        0.0022  libc-2.15.so             /usr/bin/Xorg            free
+11        0.0022  libc-2.15.so             /usr/bin/compiz          __memcmp_sse4_1
+11        0.0022  libc-2.15.so             /usr/bin/ibus-daemon     _int_malloc
+11        0.0022  libc-2.15.so             /usr/bin/oprofiled       __GI_____strtoull_l_internal
+11        0.0022  libc-2.15.so             /usr/bin/python2.7       _IO_str_init_static_internal
+11        0.0022  libc-2.15.so             /usr/lib/udisks/udisks-daemon peek_token
+11        0.0022  libglib-2.0.so.0.3200.3  /usr/bin/nautilus        /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+11        0.0022  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __pthread_disable_asynccancel
+11        0.0022  librt-2.15.so            /usr/bin/Xorg            clock_gettime
+11        0.0022  librt-2.15.so            /usr/bin/compiz          clock_gettime
+11        0.0022  no-vmlinux               /usr/bin/gtk-window-decorator /no-vmlinux
+11        0.0022  no-vmlinux               /usr/bin/zeitgeist-datahub /no-vmlinux
+11        0.0022  no-vmlinux               /usr/lib/bamf/bamfdaemon /no-vmlinux
+11        0.0022  libdbus-glib-1.so.2.2.2  /usr/lib/udisks/udisks-daemon /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.2.2
+10        0.0020  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __offtime
+10        0.0020  libc-2.15.so             /usr/bin/compiz          re_acquire_state_context
+10        0.0020  libc-2.15.so             /usr/bin/python2.7       _IO_no_init
+10        0.0020  libc-2.15.so             /usr/bin/python2.7       __getdents
+10        0.0020  libc-2.15.so             /usr/bin/python2.7       __strnlen_sse2
+10        0.0020  libc-2.15.so             /usr/lib/udisks/udisks-daemon parse_branch
+10        0.0020  libm-2.15.so             /usr/bin/gnome-terminal  lround
+10        0.0020  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_cond_wait@@GLIBC_2.3.2
+10        0.0020  libusb-1.0.so.0.1.0      /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /lib/x86_64-linux-gnu/libusb-1.0.so.0.1.0
+10        0.0020  no-vmlinux               /usr/bin/nautilus        /no-vmlinux
+10        0.0020  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZN5boost9date_time14microsec_clockINS_10posix_time5ptimeEE11create_timeEPFP2tmPKlS6_E.constprop.694
+10        0.0020  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::ImageQueue<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> > >::pop()
+10        0.0020  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::Timer::stop()
+10        0.0020  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZSt24__uninitialized_fill_n_aIPN7octomap6KeyRayEmS1_S1_EvT_T0_RKT1_RSaIT2_E.isra.421.constprop.581
+10        0.0020  libboost_regex.so.1.46.1 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libboost_regex.so.1.46.1
+10        0.0020  pyexpat.so               /usr/bin/python2.7       /usr/lib/python2.7/lib-dynload/pyexpat.so
+10        0.0020  libgdk-3.so.0.400.2      /usr/lib/gnome-settings-daemon/gnome-settings-daemon /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.400.2
+10        0.0020  libglibmm-2.4.so.1.3.0   /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libglibmm-2.4.so.1.3.0
+10        0.0020  libpango-1.0.so.0.3000.0 /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3000.0
+9         0.0018  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __fdelt_chk
+9         0.0018  libc-2.15.so             /usr/bin/compiz          _int_realloc
+9         0.0018  libc-2.15.so             /usr/bin/compiz          realloc
+9         0.0018  libc-2.15.so             /usr/bin/gnome-terminal  __strcmp_sse42
+9         0.0018  libc-2.15.so             /usr/bin/python2.7       _IO_setb
+9         0.0018  libc-2.15.so             /usr/bin/python2.7       random_r
+9         0.0018  libc-2.15.so             /usr/lib/udisks/udisks-daemon optimize_subexps
+9         0.0018  libdbus-1.so.3.5.8       /usr/bin/update-notifier /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+9         0.0018  libdbus-1.so.3.5.8       /usr/lib/gnome-disk-utility/gdu-notification-daemon /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+9         0.0018  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __floor_sse41
+9         0.0018  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_cond_signal@@GLIBC_2.3.2
+9         0.0018  no-vmlinux               /bin/bash                /no-vmlinux
+9         0.0018  no-vmlinux               /bin/cat                 /no-vmlinux
+9         0.0018  no-vmlinux               /bin/rm                  /no-vmlinux
+9         0.0018  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_pd<unsigned char*, boost::checked_array_deleter<unsigned char> >::dispose()
+9         0.0018  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nodelet::detail::CallbackQueueManager::getSmallestQueue()
+9         0.0018  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet triangulate(char*, triangulateio*, triangulateio*, triangulateio*)
+9         0.0018  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::BaseRosQueue<unsigned char>::readNextImages(boost::shared_ptr<cv_bridge::CvImage const>*)
+9         0.0018  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet message_filters::sync_policies::ExactTime<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType>::checkTuple(boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type>&)
+9         0.0018  libgobject-2.0.so.0.3200.3 /usr/bin/update-notifier /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+9         0.0018  libextmod.so             /usr/bin/Xorg            /usr/lib/xorg/modules/extensions/libextmod.so
+8         0.0016  ld-2.15.so               /usr/bin/compiz          __tls_get_addr
+8         0.0016  ld-2.15.so               /usr/bin/python2.7       _dl_relocate_object
+8         0.0016  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_seekoff_unlocked
+8         0.0016  libc-2.15.so             /usr/bin/Xorg            _int_free
+8         0.0016  libc-2.15.so             /usr/bin/Xorg            malloc_consolidate.part.3
+8         0.0016  libc-2.15.so             /usr/bin/compiz          __strcmp_sse42
+8         0.0016  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_acquire_state_context
+8         0.0016  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_cond_broadcast@@GLIBC_2.3.2
+8         0.0016  librt-2.15.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet clock_gettime
+8         0.0016  no-vmlinux               /usr/bin/sudo            /no-vmlinux
+8         0.0016  librosconsole.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/librosconsole.so
+8         0.0016  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet void ros::serialization::VectorSerializer<sensor_msgs::Image_<std::allocator<void> >, std::allocator<sensor_msgs::Image_<std::allocator<void> > >, void>::read<ros::serialization::IStream>(ros::serialization::IStream&, std::vector<sensor_msgs::Image_<std::allocator<void> >, std::allocator<sensor_msgs::Image_<std::allocator<void> > > >&)
+8         0.0016  libunitymtgrabhandles.so /usr/bin/compiz          /usr/lib/compiz/libunitymtgrabhandles.so
+8         0.0016  libapr-1.so.0.4.6        /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libapr-1.so.0.4.6
+8         0.0016  libdbus-glib-1.so.2.2.2  /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.2.2
+8         0.0016  libgdu.so.0.0.0          /usr/lib/gvfs/gvfs-gdu-volume-monitor /usr/lib/x86_64-linux-gnu/libgdu.so.0.0.0
+8         0.0016  liboctomap.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomap::OcTreeBaseImpl<octomap::CountingOcTreeNode, octomap::AbstractOcTree>::init()
+7         0.0014  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __printf_fp
+7         0.0014  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __tzstring
+7         0.0014  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet match_prefix
+7         0.0014  libc-2.15.so             /usr/bin/compiz          mbrtowc
+7         0.0014  libc-2.15.so             /usr/bin/python2.7       _IO_link_in
+7         0.0014  libc-2.15.so             /usr/bin/python2.7       __strcpy_sse2_unaligned
+7         0.0014  libc-2.15.so             /usr/bin/python2.7       _wordcopy_bwd_dest_aligned
+7         0.0014  libc-2.15.so             /usr/bin/python2.7       select
+7         0.0014  libc-2.15.so             /usr/lib/udisks/udisks-daemon free_dfa_content
+7         0.0014  libglib-2.0.so.0.3200.3  /usr/lib/gnome-disk-utility/gdu-notification-daemon /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+7         0.0014  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __kernel_standard
+7         0.0014  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout pthread_getspecific
+7         0.0014  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout pthread_mutex_lock
+7         0.0014  libpthread-2.15.so       /usr/bin/python2.7       waitpid
+7         0.0014  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::condition_variable::timed_wait(boost::unique_lock<boost::mutex>&, boost::posix_time::ptime const&)
+7         0.0014  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::get_timespec(boost::posix_time::ptime const&)
+7         0.0014  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::SharedImageSetPublisher::publish(std_msgs::Header_<std::allocator<void> > const&, cv::Mat**, unsigned int)
+7         0.0014  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::Timer::start()
+7         0.0014  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZN5boost9date_time14microsec_clockINS_10posix_time5ptimeEE11create_timeEPFP2tmPKlS6_E.constprop.354
+7         0.0014  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)
+7         0.0014  libanimation.so          /usr/bin/compiz          /usr/lib/compiz/libanimation.so
+7         0.0014  libdri2.so               /usr/bin/Xorg            /usr/lib/xorg/modules/extensions/libdri2.so
+7         0.0014  nscd                     /usr/sbin/nscd           /usr/sbin/nscd
+7         0.0014  [vdso]                   (tgid:29964 range:0x7fff265ff000-0x7fff26600000) /opt/ros/fuerte/share/rosout/bin/rosout [vdso] (tgid:29964 range:0x7fff265ff000-0x7fff26600000)
+6         0.0012  libc-2.15.so             /bin/dbus-daemon         __strcmp_sse42
+6         0.0012  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strcmp_sse2
+6         0.0012  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet getenv
+6         0.0012  libc-2.15.so             /usr/bin/compiz          iswalnum
+6         0.0012  libc-2.15.so             /usr/bin/compiz          link_nfa_nodes
+6         0.0012  libc-2.15.so             /usr/bin/gnome-terminal  __memmove_ssse3_back
+6         0.0012  libc-2.15.so             /usr/bin/gnome-terminal  free
+6         0.0012  libc-2.15.so             /usr/bin/gnome-terminal  malloc_consolidate.part.3
+6         0.0012  libc-2.15.so             /usr/bin/oprofiled       _int_malloc
+6         0.0012  libc-2.15.so             /usr/bin/oprofiled       vfprintf
+6         0.0012  libc-2.15.so             /usr/bin/python2.7       _IO_vfscanf
+6         0.0012  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor _int_malloc
+6         0.0012  libm-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __floor_sse41
+6         0.0012  libm-2.15.so             /usr/bin/python2.7       fmod
+6         0.0012  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout pthread_mutex_unlock
+6         0.0012  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_mutex_init
+6         0.0012  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_self
+6         0.0012  libpthread-2.15.so       /usr/bin/Xorg            __errno_location
+6         0.0012  libpthread-2.15.so       /usr/bin/python2.7       pthread_self
+6         0.0012  no-vmlinux               /usr/bin/update-notifier /no-vmlinux
+6         0.0012  no-vmlinux               /usr/lib/unity-lens-applications/unity-applications-daemon /no-vmlinux
+6         0.0012  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_base::destroy()
+6         0.0012  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet main
+6         0.0012  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nodelet::detail::CallbackQueue::callOne()
+6         0.0012  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet densestereo::DenseStereoNodelet::publishDisparities(cv::Mat_<float> const&)
+6         0.0012  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::shared_ptr<libks::ImageSet_<std::allocator<void> > > rosbag::Bag::instantiateBuffer<libks::ImageSet_<std::allocator<void> > >(rosbag::IndexEntry const&) const
+6         0.0012  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet message_filters::CallbackHelper1T<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&, libks::SharedImageSet_<std::allocator<void> > >::call(ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&, bool)
+6         0.0012  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet message_filters::Signal9<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType>::call(ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&)
+6         0.0012  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&, void>::getTypeInfo()
+6         0.0012  liblog4cxx.so.10.0.0     /opt/ros/fuerte/share/rosout/bin/rosout /usr/lib/liblog4cxx.so.10.0.0
+6         0.0012  libpangoft2-1.0.so.0.3000.0 /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3000.0
+6         0.0012  libpixman-1.so.0.24.4    /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.24.4
+6         0.0012  libfb.so                 /usr/bin/Xorg            /usr/lib/xorg/modules/libfb.so
+6         0.0012  [vdso]                   (tgid:22291 range:0x7fff105ff000-0x7fff10600000) /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet [vdso] (tgid:22291 range:0x7fff105ff000-0x7fff10600000)
+5         0.0010  bash                     /bin/bash                /bin/bash
+5         0.0010  ld-2.15.so               /bin/dash                _dl_relocate_object
+5         0.0010  ld-2.15.so               /usr/bin/python2.7       check_match.11236
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout gmtime_r
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_default_xsputn
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_underflow@@GLIBC_2.2.5
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_setb
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __read_nocancel
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strstr_sse2
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fclose@@GLIBC_2.2.5
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fgets
+5         0.0010  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet madvise
+5         0.0010  libc-2.15.so             /usr/bin/compiz          __mempcpy_sse2
+5         0.0010  libc-2.15.so             /usr/bin/compiz          __strlen_sse2_pminub
+5         0.0010  libc-2.15.so             /usr/bin/compiz          free_dfa_content
+5         0.0010  libc-2.15.so             /usr/bin/compiz          poll
+5         0.0010  libc-2.15.so             /usr/bin/compiz          register_state
+5         0.0010  libc-2.15.so             /usr/bin/du              __strlen_sse2
+5         0.0010  libc-2.15.so             /usr/bin/gnome-terminal  poll
+5         0.0010  libc-2.15.so             /usr/bin/ibus-daemon     __memcpy_ssse3_back
+5         0.0010  libc-2.15.so             /usr/bin/oprofiled       _IO_default_xsputn
+5         0.0010  libc-2.15.so             /usr/bin/python2.7       _IO_old_init
+5         0.0010  libc-2.15.so             /usr/bin/python2.7       _IO_un_link
+5         0.0010  libc-2.15.so             /usr/bin/python2.7       __alloc_dir
+5         0.0010  libc-2.15.so             /usr/bin/python2.7       opendir
+5         0.0010  libc-2.15.so             /usr/bin/update-notifier vfprintf
+5         0.0010  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __strcmp_sse42
+5         0.0010  libc-2.15.so             /usr/lib/udisks/udisks-daemon duplicate_node_closure
+5         0.0010  libc-2.15.so             /usr/lib/udisks/udisks-daemon lower_subexps
+5         0.0010  libc-2.15.so             /usr/lib/udisks/udisks-daemon realloc
+5         0.0010  libglib-2.0.so.0.3200.3  /usr/bin/update-notifier /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+5         0.0010  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet log
+5         0.0010  libm-2.15.so             /usr/bin/python2.7       __fmod_finite
+5         0.0010  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_mutex_unlock
+5         0.0010  libpthread-2.15.so       /usr/lib/udisks/udisks-daemon pthread_rwlock_unlock
+5         0.0010  no-vmlinux               /bin/uname               /no-vmlinux
+5         0.0010  no-vmlinux               /usr/lib/unity-lens-files/unity-files-daemon /no-vmlinux
+5         0.0010  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet BondSMContext::getState() const
+5         0.0010  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet filter::sobel3x3(unsigned char const*, unsigned char*, unsigned char*, int, int)
+5         0.0010  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet removeghosts(mesh*, behavior*, otri*)
+5         0.0010  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::SharedImageSetPublisher::publish(std_msgs::Header_<std::allocator<void> > const&, cv::Mat const&)
+5         0.0010  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet densestereo::DenseStereoNodelet::elasStereo(std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> >, cv::Mat_<float>)
+5         0.0010  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::OccupancyMapNodelet::stereoSynchronizerCallback(boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const> const&, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&)
+5         0.0010  libgvfscommon.so         /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+5         0.0010  libXext.so.6.4.0         /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+5         0.0010  libcairo.so.2.11000.2    /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libcairo.so.2.11000.2
+5         0.0010  libgdk-3.so.0.400.2      /usr/bin/nautilus        /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.400.2
+5         0.0010  libgdu.so.0.0.0          /usr/bin/update-notifier /usr/lib/x86_64-linux-gnu/libgdu.so.0.0.0
+5         0.0010  libsigc-2.0.so.0.0.0     /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libsigc-2.0.so.0.0.0
+5         0.0010  [vdso]                   (tgid:20691 range:0x7fff99f83000-0x7fff99f84000) /usr/bin/compiz          [vdso] (tgid:20691 range:0x7fff99f83000-0x7fff99f84000)
+5         0.0010  [vdso]                   (tgid:22212 range:0x7fff870cc000-0x7fff870cd000) /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet [vdso] (tgid:22212 range:0x7fff870cc000-0x7fff870cd000)
+4         0.0008  ld-2.15.so               /bin/dash                _dl_load_cache_lookup
+4         0.0008  ld-2.15.so               /bin/dash                do_lookup_x
+4         0.0008  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_add_to_namespace_list
+4         0.0008  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_new_object
+4         0.0008  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet bcmp
+4         0.0008  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet index
+4         0.0008  ld-2.15.so               /usr/bin/python2.7       _dl_fixup
+4         0.0008  ld-2.15.so               /usr/bin/python2.7       _dl_lookup_symbol_x
+4         0.0008  libc-2.15.so             /bin/dash                _exit
+4         0.0008  libc-2.15.so             /bin/dbus-daemon         __memmove_ssse3_back
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __fdelt_chk
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout pthread_cond_timedwait@@GLIBC_2.3.2
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_getline_info
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_str_init_static_internal
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __mempcpy_sse2
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __nanosleep_nocancel
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __select_nocancel
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strchr_sse42
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet localtime_r
+4         0.0008  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nscd_gethst_r
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            __fdelt_chk
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            __memset_sse2
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            __select_nocancel
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            calloc
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            getpagesize
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            ioctl
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            malloc
+4         0.0008  libc-2.15.so             /usr/bin/Xorg            setitimer
+4         0.0008  libc-2.15.so             /usr/bin/compiz          __gconv_transform_utf8_internal
+4         0.0008  libc-2.15.so             /usr/bin/compiz          __libc_disable_asynccancel
+4         0.0008  libc-2.15.so             /usr/bin/compiz          __memcpy_sse2
+4         0.0008  libc-2.15.so             /usr/bin/compiz          __memmove_ssse3_back
+4         0.0008  libc-2.15.so             /usr/bin/compiz          calloc
+4         0.0008  libc-2.15.so             /usr/bin/compiz          ioctl
+4         0.0008  libc-2.15.so             /usr/bin/compiz          match_ctx_clean
+4         0.0008  libc-2.15.so             /usr/bin/compiz          peek_token
+4         0.0008  libc-2.15.so             /usr/bin/du              __memmove_sse2
+4         0.0008  libc-2.15.so             /usr/bin/du              __memmove_ssse3_back
+4         0.0008  libc-2.15.so             /usr/bin/gnome-terminal  __memcmp_sse4_1
+4         0.0008  libc-2.15.so             /usr/bin/gnome-terminal  __strchr_sse42
+4         0.0008  libc-2.15.so             /usr/bin/oprofiled       __strcat_sse2_unaligned
+4         0.0008  libc-2.15.so             /usr/bin/python2.7       __close_nocancel
+4         0.0008  libc-2.15.so             /usr/bin/python2.7       __memmove_ssse3_back
+4         0.0008  libc-2.15.so             /usr/bin/python2.7       __strcpy_chk
+4         0.0008  libc-2.15.so             /usr/bin/python2.7       __strstr_sse42
+4         0.0008  libc-2.15.so             /usr/bin/python2.7       _itoa_word
+4         0.0008  libc-2.15.so             /usr/bin/python2.7       fread
+4         0.0008  libc-2.15.so             /usr/lib/bamf/bamfdaemon _int_malloc
+4         0.0008  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon _int_malloc
+4         0.0008  libc-2.15.so             /usr/lib/udisks/udisks-daemon calloc
+4         0.0008  libc-2.15.so             /usr/sbin/nscd           __mempcpy_ssse3_back
+4         0.0008  libdbus-1.so.3.5.8       /usr/lib/gvfs/gvfs-gdu-volume-monitor /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+4         0.0008  libglib-2.0.so.0.3200.3  /usr/bin/gtk-window-decorator /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+4         0.0008  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __cos_sse2
+4         0.0008  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __exp1
+4         0.0008  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet exp
+4         0.0008  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __lll_unlock_wake
+4         0.0008  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_mutex_destroy
+4         0.0008  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet send
+4         0.0008  libpthread-2.15.so       /usr/bin/ibus-daemon     pthread_mutex_unlock
+4         0.0008  librt-2.15.so            /opt/ros/fuerte/share/rosout/bin/rosout clock_gettime
+4         0.0008  libz.so.1.2.3.4          /usr/bin/python2.7       /lib/x86_64-linux-gnu/libz.so.1.2.3.4
+4         0.0008  no-vmlinux               /usr/lib/gnome-disk-utility/gdu-notification-daemon /no-vmlinux
+4         0.0008  no-vmlinux               /usr/lib/rtkit/rtkit-daemon /no-vmlinux
+4         0.0008  libroslib.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /opt/ros/fuerte/lib/libroslib.so
+4         0.0008  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet bond::Bond::isBroken()
+4         0.0008  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet bond::Bond::publishStatus(bool)
+4         0.0008  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nodelet::detail::CallbackQueue::addCallback(boost::shared_ptr<ros::CallbackInterface> const&, unsigned long)
+4         0.0008  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet parsecommandline(int, char**, behavior*)
+4         0.0008  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet triangleinit(mesh*)
+4         0.0008  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet cv::Mat::operator=(cv::Mat const&)
+4         0.0008  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::StereoRosQueue<unsigned char>::queueFrame()
+4         0.0008  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet densestereo::DenseStereoNodelet::readStereoPair()
+4         0.0008  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet message_filters::sync_policies::ExactTime<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType>::clearOldTuples()
+4         0.0008  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::RobustOcTree::insertPointCloud(octomap::Pointcloud const&, octomath::Vector3 const&, octomath::Pose6D const&, double, bool)
+4         0.0008  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<message_filters::NullType const>::operator=(ros::MessageEvent<message_filters::NullType const> const&)
+4         0.0008  liboverlay-scrollbar3-0.2.so.0.0.16 /usr/bin/gnome-terminal  /usr/lib/liboverlay-scrollbar3-0.2.so.0.0.16
+4         0.0008  libXfixes.so.3.1.0       /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+4         0.0008  libpango-1.0.so.0.3000.0 /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3000.0
+3         0.0006  ld-2.15.so               /bin/dash                _dl_lookup_symbol_x
+3         0.0006  ld-2.15.so               /bin/dash                strcmp
+3         0.0006  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet mempcpy
+3         0.0006  ld-2.15.so               /usr/bin/sudo            _dl_close_worker
+3         0.0006  libc-2.15.so             /bin/dash                _int_malloc
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __tzfile_compute
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout _int_malloc
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_close_it@@GLIBC_2.2.5
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_seek
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __nscd_cache_search
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __open_nocancel
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strlen_sse2
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_addr
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet getaddrinfo
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet gmtime_r
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet munmap
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet readdir
+3         0.0006  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet usleep
+3         0.0006  libc-2.15.so             /usr/bin/Xorg            __memmove_ssse3_back
+3         0.0006  libc-2.15.so             /usr/bin/Xorg            select
+3         0.0006  libc-2.15.so             /usr/bin/compiz          __read_nocancel
+3         0.0006  libc-2.15.so             /usr/bin/compiz          build_wcs_buffer
+3         0.0006  libc-2.15.so             /usr/bin/compiz          merge_state_with_log
+3         0.0006  libc-2.15.so             /usr/bin/compiz          parse_expression
+3         0.0006  libc-2.15.so             /usr/bin/compiz          pthread_cond_signal@@GLIBC_2.3.2
+3         0.0006  libc-2.15.so             /usr/bin/compiz          pthread_self
+3         0.0006  libc-2.15.so             /usr/bin/compiz          re_compile_fastmap_iter.isra.30
+3         0.0006  libc-2.15.so             /usr/bin/compiz          re_node_set_merge.part.17
+3         0.0006  libc-2.15.so             /usr/bin/du              __strlen_sse2_pminub
+3         0.0006  libc-2.15.so             /usr/bin/du              _int_free
+3         0.0006  libc-2.15.so             /usr/bin/du              _int_malloc
+3         0.0006  libc-2.15.so             /usr/bin/gnome-terminal  __memset_sse2
+3         0.0006  libc-2.15.so             /usr/bin/gnome-terminal  calloc
+3         0.0006  libc-2.15.so             /usr/bin/gnome-terminal  realloc
+3         0.0006  libc-2.15.so             /usr/bin/ibus-daemon     _int_free
+3         0.0006  libc-2.15.so             /usr/bin/oprofiled       _IO_sputbackc
+3         0.0006  libc-2.15.so             /usr/bin/oprofiled       __memmove_ssse3_back
+3         0.0006  libc-2.15.so             /usr/bin/oprofiled       __strchr_sse42
+3         0.0006  libc-2.15.so             /usr/bin/oprofiled       _int_free
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       _IO_file_fopen@@GLIBC_2.2.5
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       __fopen_internal
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       __libc_enable_asynccancel
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       __mempcpy_sse2
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       __open_nocancel
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       __rawmemchr_sse2
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       closedir
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       fclose@@GLIBC_2.2.5
+3         0.0006  libc-2.15.so             /usr/bin/python2.7       getenv
+3         0.0006  libc-2.15.so             /usr/bin/update-notifier _int_malloc
+3         0.0006  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon vfprintf
+3         0.0006  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __memcpy_ssse3_back
+3         0.0006  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __strlen_sse2_pminub
+3         0.0006  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor _int_free
+3         0.0006  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor calloc
+3         0.0006  libc-2.15.so             /usr/lib/udisks/udisks-daemon __memset_sse2
+3         0.0006  libdbus-1.so.3.5.8       /usr/bin/nautilus        /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+3         0.0006  libglib-2.0.so.0.3200.3  /usr/bin/gnome-screensaver /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+3         0.0006  libglib-2.0.so.0.3200.3  /usr/bin/python2.7       /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+3         0.0006  libnss_files-2.15.so     /usr/sbin/nscd           internal_getent
+3         0.0006  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout __pthread_mutex_unlock_usercnt
+3         0.0006  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout pthread_once
+3         0.0006  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __pthread_enable_asynccancel
+3         0.0006  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __pthread_mutex_unlock_usercnt
+3         0.0006  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _pthread_cleanup_push_defer
+3         0.0006  libpthread-2.15.so       /usr/bin/Xorg            pthread_mutex_lock
+3         0.0006  libpthread-2.15.so       /usr/bin/Xorg            read
+3         0.0006  libpthread-2.15.so       /usr/bin/gnome-terminal  __pthread_enable_asynccancel
+3         0.0006  libpthread-2.15.so       /usr/bin/python2.7       __pthread_disable_asynccancel
+3         0.0006  libpthread-2.15.so       /usr/bin/python2.7       sem_trywait
+3         0.0006  libpthread-2.15.so       /usr/lib/udisks/udisks-daemon pthread_rwlock_rdlock
+3         0.0006  libpthread-2.15.so       /usr/sbin/nscd           __pthread_mutex_cond_lock
+3         0.0006  rosout                   /opt/ros/fuerte/share/rosout/bin/rosout /opt/ros/fuerte/share/rosout/bin/rosout
+3         0.0006  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::function::void_function_obj_invoker1<boost::function<void (boost::shared_ptr<bond::Status_<std::allocator<void> > const> const&)>, void, boost::shared_ptr<bond::Status_<std::allocator<void> > const> >::invoke(boost::detail::function::function_buffer&, boost::shared_ptr<bond::Status_<std::allocator<void> > const>)
+3         0.0006  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nodelet::detail::CallbackQueueManager::workerThread(nodelet::detail::CallbackQueueManager::ThreadInfo*)
+3         0.0006  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Descriptor::Descriptor(unsigned char*, int, int, int, int)
+3         0.0006  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet estimate(int, float*)
+3         0.0006  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet exactinit()
+3         0.0006  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet poolzero(memorypool*)
+3         0.0006  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<octomap::OcTreeKey, std::pair<octomap::OcTreeKey const, float>, std::allocator<std::pair<octomap::OcTreeKey const, float> >, std::_Select1st<std::pair<octomap::OcTreeKey const, float> >, std::equal_to<octomap::OcTreeKey>, octomap::OcTreeKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, false, true>::_M_rehash(unsigned long)
+3         0.0006  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet void message_filters::Synchronizer<message_filters::sync_policies::ExactTime<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType> >::cb<0>(boost::mpl::at_c<boost::mpl::vector<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na>, 0>::type const&)
+3         0.0006  libplace.so              /usr/bin/compiz          /usr/lib/compiz/libplace.so
+3         0.0006  libcompizconfig.so.0.0.0 /usr/bin/compiz          /usr/lib/libcompizconfig.so.0.0.0
+3         0.0006  libwnck-1.so.22.3.31     /usr/bin/gtk-window-decorator /usr/lib/libwnck-1.so.22.3.31
+3         0.0006  _dbus_bindings.so        /usr/bin/python2.7       /usr/lib/python2.7/dist-packages/_dbus_bindings.so
+3         0.0006  libXdamage.so.1.1.0      /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+3         0.0006  libdbus-glib-1.so.2.2.2  /usr/bin/update-notifier /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.2.2
+3         0.0006  libdbus-glib-1.so.2.2.2  /usr/lib/gvfs/gvfs-gdu-volume-monitor /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.2.2
+3         0.0006  libdrm.so.2.4.0          /usr/bin/Xorg            /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+3         0.0006  libgdk-3.so.0.400.2      /usr/bin/gnome-screensaver /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.400.2
+3         0.0006  libgdu.so.0.0.0          /usr/lib/gnome-disk-utility/gdu-notification-daemon /usr/lib/x86_64-linux-gnu/libgdu.so.0.0.0
+3         0.0006  pango-basic-fc.so        /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so
+3         0.0006  liboctomap.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomap::Pointcloud::clear()
+3         0.0006  [vdso]                   (tgid:21763 range:0x7fff3d1ff000-0x7fff3d200000) /usr/bin/gnome-terminal  [vdso] (tgid:21763 range:0x7fff3d1ff000-0x7fff3d200000)
+2         0.0004  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet dl_main
+2         0.0004  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet dl_open_worker
+2         0.0004  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet open_path
+2         0.0004  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet strlen
+2         0.0004  ld-2.15.so               /usr/bin/python2.7       _dl_name_match_p
+2         0.0004  ld-2.15.so               /usr/bin/python2.7       mempcpy
+2         0.0004  ld-2.15.so               /usr/lib/udisks/udisks-helper-ata-smart-collect do_lookup_x
+2         0.0004  libc-2.15.so             /bin/dbus-daemon         _int_malloc
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __libc_disable_asynccancel
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __memcmp_sse4_1
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __select_nocancel
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __tz_convert
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout _int_free
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout pthread_mutex_unlock
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_old_init
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_un_link
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __close_nocancel
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __ctype_b_loc
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __fopen_internal
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __gconv_transform_utf8_internal
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memcmp_sse2
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memmove_sse2
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __mpn_mul_1
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strncmp_sse42
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __vsprintf_chk
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet clearerr
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet gaih_inet
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet hack_digit.14957
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet isspace
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet read
+2         0.0004  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet socket
+2         0.0004  libc-2.15.so             /usr/bin/Xorg            __strlen_sse2_pminub
+2         0.0004  libc-2.15.so             /usr/bin/compiz          _IO_default_xsputn
+2         0.0004  libc-2.15.so             /usr/bin/compiz          __errno_location
+2         0.0004  libc-2.15.so             /usr/bin/compiz          __libc_alloca_cutoff
+2         0.0004  libc-2.15.so             /usr/bin/compiz          __vasprintf_chk
+2         0.0004  libc-2.15.so             /usr/bin/compiz          _dl_mcount_wrapper_check
+2         0.0004  libc-2.15.so             /usr/bin/compiz          extend_buffers
+2         0.0004  libc-2.15.so             /usr/bin/compiz          getenv
+2         0.0004  libc-2.15.so             /usr/bin/compiz          lower_subexp
+2         0.0004  libc-2.15.so             /usr/bin/compiz          optimize_subexps
+2         0.0004  libc-2.15.so             /usr/bin/compiz          parse_branch
+2         0.0004  libc-2.15.so             /usr/bin/compiz          re_dfa_add_node
+2         0.0004  libc-2.15.so             /usr/bin/compiz          writev
+2         0.0004  libc-2.15.so             /usr/bin/du              _wordcopy_bwd_dest_aligned
+2         0.0004  libc-2.15.so             /usr/bin/du              free
+2         0.0004  libc-2.15.so             /usr/bin/du              readdir
+2         0.0004  libc-2.15.so             /usr/bin/gnome-terminal  __strlen_sse2_pminub
+2         0.0004  libc-2.15.so             /usr/bin/gnome-terminal  _int_realloc
+2         0.0004  libc-2.15.so             /usr/bin/gnome-terminal  bsearch
+2         0.0004  libc-2.15.so             /usr/bin/gnome-terminal  finite
+2         0.0004  libc-2.15.so             /usr/bin/gtk-window-decorator __memcpy_ssse3_back
+2         0.0004  libc-2.15.so             /usr/bin/ibus-daemon     __strcmp_sse42
+2         0.0004  libc-2.15.so             /usr/bin/ibus-daemon     malloc
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       _IO_no_init
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       _IO_old_init
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       _IO_str_init_static_internal
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       __isoc99_vsscanf
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       __memcpy_sse2
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       __rawmemchr_sse2
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       __strcpy_sse2_unaligned
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       __strlen_sse2_pminub
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       _itoa_word
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       fgets
+2         0.0004  libc-2.15.so             /usr/bin/oprofiled       malloc
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       _IO_doallocbuf
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       _IO_file_doallocate
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       __offtime
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       __strftime_internal
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       __strrchr_sse42
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       _dl_addr
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       getnameinfo
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       memchr
+2         0.0004  libc-2.15.so             /usr/bin/python2.7       srandom_r
+2         0.0004  libc-2.15.so             /usr/bin/update-notifier _IO_default_xsputn
+2         0.0004  libc-2.15.so             /usr/bin/update-notifier __strcmp_sse42
+2         0.0004  libc-2.15.so             /usr/bin/update-notifier malloc_consolidate.part.3
+2         0.0004  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon __strcmp_sse42
+2         0.0004  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon _int_free
+2         0.0004  libc-2.15.so             /usr/lib/gnome-settings-daemon/gnome-settings-daemon __memset_sse2
+2         0.0004  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor _IO_vfscanf
+2         0.0004  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __strstr_sse2
+2         0.0004  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor _int_realloc
+2         0.0004  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor malloc
+2         0.0004  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor memchr
+2         0.0004  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor vfprintf
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon __strlen_sse2_pminub
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon _int_realloc
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon parse_reg_exp
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_compile_fastmap_iter.isra.30
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_node_set_merge.part.17
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_search_internal
+2         0.0004  libc-2.15.so             /usr/lib/udisks/udisks-daemon register_state
+2         0.0004  libc-2.15.so             /usr/sbin/cupsd          __strcmp_sse42
+2         0.0004  libc-2.15.so             /usr/sbin/nscd           __stpcpy_sse2_unaligned
+2         0.0004  libdbus-1.so.3.5.8       /usr/lib/gnome-settings-daemon/gnome-settings-daemon /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+2         0.0004  libdbus-1.so.3.5.8       /usr/lib/unity/unity-panel-service /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+2         0.0004  libglib-2.0.so.0.3200.3  /usr/bin/zeitgeist-datahub /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+2         0.0004  libm-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pow
+2         0.0004  libm-2.15.so             /usr/bin/gnome-terminal  __floor_sse41
+2         0.0004  libnss_files-2.15.so     /usr/sbin/nscd           _nss_files_gethostbyname2_r
+2         0.0004  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __read_nocancel
+2         0.0004  libpthread-2.15.so       /usr/bin/Xorg            __read_nocancel
+2         0.0004  libpthread-2.15.so       /usr/bin/compiz          pthread_cond_broadcast@@GLIBC_2.3.2
+2         0.0004  libpthread-2.15.so       /usr/bin/compiz          pthread_cond_destroy@@GLIBC_2.3.2
+2         0.0004  libpthread-2.15.so       /usr/bin/compiz          pthread_cond_signal@@GLIBC_2.3.2
+2         0.0004  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_rwlock_rdlock
+2         0.0004  libpthread-2.15.so       /usr/bin/gnome-terminal  recv
+2         0.0004  libpthread-2.15.so       /usr/bin/gtk-window-decorator pthread_mutex_unlock
+2         0.0004  libpthread-2.15.so       /usr/bin/nautilus        pthread_mutex_lock
+2         0.0004  libpthread-2.15.so       /usr/bin/python2.7       _pthread_cleanup_pop_restore
+2         0.0004  libpthread-2.15.so       /usr/bin/python2.7       flockfile
+2         0.0004  libpthread-2.15.so       /usr/bin/python2.7       recv
+2         0.0004  libpthread-2.15.so       /usr/bin/update-notifier pthread_mutex_lock
+2         0.0004  libpthread-2.15.so       /usr/lib/bamf/bamfdaemon pthread_mutex_unlock
+2         0.0004  libpthread-2.15.so       /usr/lib/gnome-disk-utility/gdu-notification-daemon pthread_mutex_lock
+2         0.0004  libpthread-2.15.so       /usr/lib/gnome-settings-daemon/gnome-settings-daemon pthread_getspecific
+2         0.0004  libpthread-2.15.so       /usr/sbin/nscd           pthread_cond_wait@@GLIBC_2.3.2
+2         0.0004  libudev.so.0.13.0        /usr/bin/Xorg            /lib/x86_64-linux-gnu/libudev.so.0.13.0
+2         0.0004  no-vmlinux               /usr/lib/indicator-appmenu/hud-service /no-vmlinux
+2         0.0004  no-vmlinux               /usr/lib/unity/unity-panel-service /no-vmlinux
+2         0.0004  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<bond::Status_<std::allocator<void> > const>::MessageEvent(ros::MessageEvent<void const> const&, boost::function<boost::shared_ptr<bond::Status_<std::allocator<void> > > ()> const&)
+2         0.0004  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<std::string, std::allocator<std::string> >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::string*, std::vector<std::string, std::allocator<std::string> > >, std::string const&)
+2         0.0004  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nodelet::detail::CallbackQueueManager::callbackAdded(boost::shared_ptr<nodelet::detail::CallbackQueue> const&)
+2         0.0004  libcv_bridge.so          /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_pd<cv_bridge::CvImage*, boost::detail::sp_ms_deleter<cv_bridge::CvImage> >::~sp_counted_impl_pd()
+2         0.0004  libcv_bridge.so          /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet cv_bridge::getCvType(std::string const&)
+2         0.0004  libcv_bridge.so          /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet cv_bridge::toCvShare(sensor_msgs::Image_<std::allocator<void> > const&, boost::shared_ptr<void const> const&, std::string const&)
+2         0.0004  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet initializevertexpool(mesh*, behavior*)
+2         0.0004  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet traversalinit(memorypool*)
+2         0.0004  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZNK5boost9date_time9base_timeINS_10posix_time5ptimeENS0_19counted_time_systemINS0_16counted_time_repINS2_33millisec_posix_time_system_configEEEEEEplERKNS2_13time_durationE.constprop.706
+2         0.0004  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::ImageQueue<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> > >::push(boost::shared_ptr<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> > const> const&)
+2         0.0004  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<libks::ImageSet_<std::allocator<void> > const>::MessageEvent(ros::MessageEvent<void const> const&, boost::function<boost::shared_ptr<libks::ImageSet_<std::allocator<void> > > ()> const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::function::void_function_obj_invoker1<boost::_bi::bind_t<void, boost::_mfi::mf1<void, message_filters::Subscriber<geometry_msgs::PoseStamped_<std::allocator<void> > >, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&>, boost::_bi::list2<boost::_bi::value<message_filters::Subscriber<geometry_msgs::PoseStamped_<std::allocator<void> > >*>, boost::arg<1> > >, void, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&>::invoke(boost::detail::function::function_buffer&, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::function::void_function_obj_invoker9<boost::function<void (boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const> const&, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&)>, void, boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const>, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const> >::invoke(boost::detail::function::function_buffer&, boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const>, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_p<geometry_msgs::PoseStamped_<std::allocator<void> > >::dispose()
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > > rosbag::Bag::instantiateBuffer<geometry_msgs::PoseStamped_<std::allocator<void> > >(rosbag::IndexEntry const&) const
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type>::tuple(boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type>::~tuple()
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet message_filters::Subscriber<libks::SharedImageSet_<std::allocator<void> > >::cb(ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>::init(boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&, boost::shared_ptr<std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string> > > > const&, ros::Time, bool, boost::function<boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > > ()> const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>::init(boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const> const&, boost::shared_ptr<std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string> > > > const&, ros::Time, bool, boost::function<boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > > ()> const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<message_filters::NullType const>::~MessageEvent()
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<ros::Time, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> >, std::_Select1st<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::less<ros::Time>, std::allocator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > const&)
+2         0.0004  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::tr1::_Hashtable<OccPrevKey, OccPrevKey, std::allocator<OccPrevKey>, std::_Identity<OccPrevKey>, OccPrevKey::KeyEqual, OccPrevKey::KeyHash, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, true, true>::_M_rehash(unsigned long)
+2         0.0004  libccp.so                /usr/bin/compiz          /usr/lib/compiz/libccp.so
+2         0.0004  libscale.so              /usr/bin/compiz          /usr/lib/compiz/libscale.so
+2         0.0004  libsession.so            /usr/bin/compiz          /usr/lib/compiz/libsession.so
+2         0.0004  libworkarounds.so        /usr/bin/compiz          /usr/lib/compiz/libworkarounds.so
+2         0.0004  libunico.so              /usr/bin/gnome-terminal  /usr/lib/gtk-3.0/3.0.0/theming-engines/libunico.so
+2         0.0004  libboost_signals.so.1.46.1 /opt/ros/fuerte/share/rosout/bin/rosout /usr/lib/libboost_signals.so.1.46.1
+2         0.0004  libmagic.so.1.0.0        /usr/bin/file            /usr/lib/libmagic.so.1.0.0
+2         0.0004  _gtk.so                  /usr/bin/python2.7       /usr/lib/python2.7/dist-packages/gtk-2.0/gtk/_gtk.so
+2         0.0004  libgvfscommon.so         /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+2         0.0004  libX11.so.6.3.0          /usr/lib/bamf/bamfdaemon /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+2         0.0004  libcups.so.2             /usr/sbin/cupsd          /usr/lib/x86_64-linux-gnu/libcups.so.2
+2         0.0004  libgdk-x11-2.0.so.0.2400.10 /usr/bin/gtk-window-decorator /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.10
+2         0.0004  libgio-2.0.so.0.3200.3   /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+2         0.0004  libgio-2.0.so.0.3200.3   /usr/lib/gnome-settings-daemon/gnome-settings-daemon /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+2         0.0004  libglapi.so.0.0.0        /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+2         0.0004  libgobject-2.0.so.0.3200.3 /usr/bin/zeitgeist-datahub /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+2         0.0004  libgobject-2.0.so.0.3200.3 /usr/lib/gnome-settings-daemon/gnome-settings-daemon /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+2         0.0004  libxcb.so.1.1.0          /usr/bin/gtk-window-decorator /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+2         0.0004  libxcb.so.1.1.0          /usr/lib/bamf/bamfdaemon /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+2         0.0004  evdev_drv.so             /usr/bin/Xorg            /usr/lib/xorg/modules/input/evdev_drv.so
+2         0.0004  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Pose6D::~Pose6D()
+2         0.0004  [vdso]                   (tgid:29951 range:0x7fff8aca1000-0x7fff8aca2000) /usr/bin/python2.7       [vdso] (tgid:29951 range:0x7fff8aca1000-0x7fff8aca2000)
+1         0.0002  ld-2.15.so               /bin/cat                 check_match.11236
+1         0.0002  ld-2.15.so               /bin/dash                _dl_check_map_versions
+1         0.0002  ld-2.15.so               /bin/dash                _dl_fixup
+1         0.0002  ld-2.15.so               /bin/dash                _dl_start
+1         0.0002  ld-2.15.so               /bin/dash                _dl_sysdep_start
+1         0.0002  ld-2.15.so               /bin/dash                calloc
+1         0.0002  ld-2.15.so               /bin/dash                check_match.11236
+1         0.0002  ld-2.15.so               /bin/dash                index
+1         0.0002  ld-2.15.so               /bin/dash                init_cacheinfo
+1         0.0002  ld-2.15.so               /bin/dash                malloc
+1         0.0002  ld-2.15.so               /bin/dash                memcpy
+1         0.0002  ld-2.15.so               /bin/dash                memset
+1         0.0002  ld-2.15.so               /bin/dash                process_envvars
+1         0.0002  ld-2.15.so               /bin/rm                  fillin_rpath
+1         0.0002  ld-2.15.so               /bin/uname               _dl_lookup_symbol_x
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __GI___fxstat
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_allocate_tls_init
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_check_map_versions
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_init_internal
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _dl_load_cache_lookup
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _wordcopy_fwd_dest_aligned
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet call_init.part.0
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet match_symbol
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet memcpy
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet mprotect
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet open64
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet openaux
+1         0.0002  ld-2.15.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet strsep
+1         0.0002  ld-2.15.so               /usr/bin/du              _dl_lookup_symbol_x
+1         0.0002  ld-2.15.so               /usr/bin/file            _dl_map_object_from_fd
+1         0.0002  ld-2.15.so               /usr/bin/python2.7       __tls_get_addr
+1         0.0002  ld-2.15.so               /usr/bin/python2.7       _dl_sysdep_start
+1         0.0002  ld-2.15.so               /usr/bin/python2.7       call_init.part.0
+1         0.0002  ld-2.15.so               /usr/lib/udisks/udisks-helper-ata-smart-collect __init_cpu_features
+1         0.0002  ld-2.15.so               /usr/lib/udisks/udisks-helper-ata-smart-collect _dl_lookup_symbol_x
+1         0.0002  ld-2.15.so               /usr/lib/udisks/udisks-helper-ata-smart-collect _dl_name_match_p
+1         0.0002  ld-2.15.so               /usr/lib/udisks/udisks-helper-ata-smart-collect _dl_relocate_object
+1         0.0002  libatasmart.so.4.0.4     /usr/lib/udisks/udisks-daemon /lib/x86_64-linux-gnu/libatasmart.so.4.0.4
+1         0.0002  libc-2.15.so             /bin/bash                __memset_sse2
+1         0.0002  libc-2.15.so             /bin/bash                sigemptyset
+1         0.0002  libc-2.15.so             /bin/dash                __GI___libc_sigaction
+1         0.0002  libc-2.15.so             /bin/dash                __init_cpu_features
+1         0.0002  libc-2.15.so             /bin/dash                __strchr_sse42
+1         0.0002  libc-2.15.so             /bin/dash                __strcmp_sse42
+1         0.0002  libc-2.15.so             /bin/dash                __strrchr_sse2
+1         0.0002  libc-2.15.so             /bin/dash                intel_02_known_compare
+1         0.0002  libc-2.15.so             /bin/dash                memcmp
+1         0.0002  libc-2.15.so             /bin/dash                strchr
+1         0.0002  libc-2.15.so             /bin/dash                strdup
+1         0.0002  libc-2.15.so             /bin/dash                vfprintf
+1         0.0002  libc-2.15.so             /bin/dbus-daemon         __memset_sse2
+1         0.0002  libc-2.15.so             /bin/dbus-daemon         __strlen_sse2_pminub
+1         0.0002  libc-2.15.so             /bin/dbus-daemon         calloc
+1         0.0002  libc-2.15.so             /bin/dbus-daemon         malloc
+1         0.0002  libc-2.15.so             /bin/rm                  _dl_addr
+1         0.0002  libc-2.15.so             /bin/uname               __strcmp_sse2
+1         0.0002  libc-2.15.so             /bin/uname               _dl_addr
+1         0.0002  libc-2.15.so             /bin/uname               init_cacheinfo
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __libc_enable_asynccancel
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout __strncasecmp_l_sse42
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout freeaddrinfo
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/share/rosout/bin/rosout malloc
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_default_uflow
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_doallocbuf
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_close
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_doallocate
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_file_fopen@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_init
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_link_in
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_no_init
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_proc_close@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _IO_switch_to_get_mode
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __GI_qsort_r.constprop.1
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __connect_nocancel
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __ctype_tolower_loc
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __fopen_maybe_mmap
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __fprintf_chk
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __fxstat64
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memcpy_chk_ssse3_back
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __memmove_ssse3_back
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __mpn_construct_double
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __mpn_extract_double
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __mpn_mul
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __new_exitfn
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __nis_hash
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __nscd_get_nl_timestamp
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __nss_hostname_digits_dots
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __opendirat
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __recvmsg_nocancel
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strcpy_sse2
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strncasecmp_sse42
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strncmp_sse2
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __strncpy_sse2_unaligned
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __uflow
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __underflow
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __vsnprintf_chk
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _nl_intern_locale_data
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet btowc
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet difftime
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fork
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fscanf
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fseek
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet gethostbyname2_r@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet isalnum
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet isalpha
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet make_request
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet memalign
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet mmap64
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet nanosleep
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet random_r
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet sbrk
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet select
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet setlocale
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet strchrnul
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet tolower
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet uselocale
+1         0.0002  libc-2.15.so             /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet write
+1         0.0002  libc-2.15.so             /usr/bin/Xorg            writev
+1         0.0002  libc-2.15.so             /usr/bin/compiz          _IO_no_init
+1         0.0002  libc-2.15.so             /usr/bin/compiz          _IO_old_init
+1         0.0002  libc-2.15.so             /usr/bin/compiz          _IO_setb
+1         0.0002  libc-2.15.so             /usr/bin/compiz          __dcigettext
+1         0.0002  libc-2.15.so             /usr/bin/compiz          __libc_enable_asynccancel
+1         0.0002  libc-2.15.so             /usr/bin/compiz          __snprintf_chk
+1         0.0002  libc-2.15.so             /usr/bin/compiz          __strcmp_sse2
+1         0.0002  libc-2.15.so             /usr/bin/compiz          __vsnprintf_chk
+1         0.0002  libc-2.15.so             /usr/bin/compiz          calc_eclosure_iter
+1         0.0002  libc-2.15.so             /usr/bin/compiz          ffsll
+1         0.0002  libc-2.15.so             /usr/bin/compiz          lower_subexps
+1         0.0002  libc-2.15.so             /usr/bin/compiz          parse_reg_exp
+1         0.0002  libc-2.15.so             /usr/bin/compiz          pthread_mutex_unlock
+1         0.0002  libc-2.15.so             /usr/bin/compiz          re_node_set_insert.part.18
+1         0.0002  libc-2.15.so             /usr/bin/compiz          re_string_context_at
+1         0.0002  libc-2.15.so             /usr/bin/compiz          re_string_realloc_buffers
+1         0.0002  libc-2.15.so             /usr/bin/compiz          recv
+1         0.0002  libc-2.15.so             /usr/bin/compiz          regcomp
+1         0.0002  libc-2.15.so             /usr/bin/compiz          regfree
+1         0.0002  libc-2.15.so             /usr/bin/compiz          strchrnul
+1         0.0002  libc-2.15.so             /usr/bin/du              _dl_addr
+1         0.0002  libc-2.15.so             /usr/bin/du              fcntl
+1         0.0002  libc-2.15.so             /usr/bin/du              getenv
+1         0.0002  libc-2.15.so             /usr/bin/du              malloc
+1         0.0002  libc-2.15.so             /usr/bin/du              malloc_consolidate.part.3
+1         0.0002  libc-2.15.so             /usr/bin/du              openat64
+1         0.0002  libc-2.15.so             /usr/bin/file            __gconv_load_cache
+1         0.0002  libc-2.15.so             /usr/bin/file            __memmove_ssse3_back
+1         0.0002  libc-2.15.so             /usr/bin/file            _dl_addr
+1         0.0002  libc-2.15.so             /usr/bin/file            _getopt_internal_r
+1         0.0002  libc-2.15.so             /usr/bin/gnome-screensaver __memmove_ssse3_back
+1         0.0002  libc-2.15.so             /usr/bin/gnome-terminal  __libc_disable_asynccancel
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     _IO_old_init
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     __libc_enable_asynccancel
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     __memset_sse2
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     __strchr_sse42
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     __strspn_sse2
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     calloc
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     free
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     malloc_consolidate.part.3
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     realloc
+1         0.0002  libc-2.15.so             /usr/bin/ibus-daemon     vfprintf
+1         0.0002  libc-2.15.so             /usr/bin/nautilus        __memset_sse2
+1         0.0002  libc-2.15.so             /usr/bin/nautilus        poll
+1         0.0002  libc-2.15.so             /usr/bin/nautilus        writev
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       _IO_doallocbuf
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       _IO_file_underflow@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       _IO_un_link
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       __open_nocancel
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       free
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       memchr
+1         0.0002  libc-2.15.so             /usr/bin/oprofiled       mkdir
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_default_finish
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_file_finish@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_file_init@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_file_seekoff@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_file_underflow@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_file_xsgetn
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_switch_to_get_mode
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       _IO_unsave_markers
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __ctype_init
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __current_locale_name
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __dcigettext
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __fdelt_chk
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __fxstat64
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __nscd_get_map_ref
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __nscd_open_socket
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __nss_hostname_digits_dots
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __sigjmp_save
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __sprintf_chk
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __stpcpy_sse2
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __strcat_chk
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __strcmp_sse2
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __tzfile_compute
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       __uflow
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       clone
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       fgetc
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       fileno
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       freeaddrinfo
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       fseek
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       getpagesize
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       localtime
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       msort_with_tmp.part.0
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       new_do_write
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       open
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       random
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       sbrk
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       srandom
+1         0.0002  libc-2.15.so             /usr/bin/python2.7       unlink
+1         0.0002  libc-2.15.so             /usr/bin/sudo            _int_free
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier __memmove_ssse3_back
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier _int_realloc
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier _nl_make_l10nflist
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier free
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier malloc
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier pthread_cond_signal@@GLIBC_2.3.2
+1         0.0002  libc-2.15.so             /usr/bin/update-notifier realloc
+1         0.0002  libc-2.15.so             /usr/bin/zeitgeist-datahub __memset_sse2
+1         0.0002  libc-2.15.so             /usr/lib/bamf/bamfdaemon __strchr_sse42
+1         0.0002  libc-2.15.so             /usr/lib/bamf/bamfdaemon _int_free
+1         0.0002  libc-2.15.so             /usr/lib/bamf/bamfdaemon free
+1         0.0002  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon _IO_default_xsputn
+1         0.0002  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon _IO_str_init_static_internal
+1         0.0002  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon __strlen_sse2_pminub
+1         0.0002  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon __vasprintf_chk
+1         0.0002  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon malloc_consolidate.part.3
+1         0.0002  libc-2.15.so             /usr/lib/gnome-disk-utility/gdu-notification-daemon strchrnul
+1         0.0002  libc-2.15.so             /usr/lib/gnome-settings-daemon/gnome-settings-daemon __libc_disable_asynccancel
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor _IO_default_xsputn
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor _IO_str_init_static_internal
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __lxstat
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __memcpy_sse2
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __strlen_sse2
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor __strncmp_sse42
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor argz_stringify
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor fgets_unlocked
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor free
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor getcwd
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor getmntent_r
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor realloc
+1         0.0002  libc-2.15.so             /usr/lib/gvfs/gvfs-gdu-volume-monitor strchrnul
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon __gconv_transform_utf8_internal
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon __memcpy_sse2
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon __memcpy_ssse3_back
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon __memmove_ssse3_back
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon __strcmp_sse42
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon __strlen_sse2
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon iconv_open
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon peek_token_bracket.part.8
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-daemon re_string_context_at
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect _IO_default_xsputn
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect _IO_file_doallocate
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect __fopen_internal
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect __gconv_lookup_cache
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect __strcmp_sse42
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect _dl_addr
+1         0.0002  libc-2.15.so             /usr/lib/udisks/udisks-helper-ata-smart-collect strdup
+1         0.0002  libc-2.15.so             /usr/lib/unity-lens-files/unity-files-daemon __memset_sse2
+1         0.0002  libc-2.15.so             /usr/lib/unity-lens-files/unity-files-daemon free
+1         0.0002  libc-2.15.so             /usr/sbin/cupsd          vfprintf
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           _IO_getline_info
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           __nss_hostname_digits_dots
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           __nss_next2
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           __strcasecmp_l_sse42
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           _int_malloc
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           accept4
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           fopen@@GLIBC_2.2.5
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           inet_pton
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           malloc
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           memchr
+1         0.0002  libc-2.15.so             /usr/sbin/nscd           mmap64
+1         0.0002  libc-2.15.so             /usr/sbin/ntpd           select
+1         0.0002  libdbus-1.so.3.5.8       /usr/bin/gtk-window-decorator /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+1         0.0002  libdbus-1.so.3.5.8       /usr/bin/zeitgeist-datahub /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+1         0.0002  libdbus-1.so.3.5.8       /usr/lib/indicator-appmenu/hud-service /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+1         0.0002  libdbus-1.so.3.5.8       /usr/lib/unity-lens-files/unity-files-daemon /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+1         0.0002  libgcc_s.so.1            /usr/bin/compiz          /lib/x86_64-linux-gnu/libgcc_s.so.1
+1         0.0002  libglib-2.0.so.0.3200.3  /usr/lib/indicator-appmenu/hud-service /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+1         0.0002  libglib-2.0.so.0.3200.3  /usr/lib/unity-lens-applications/unity-applications-daemon /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+1         0.0002  libglib-2.0.so.0.3200.3  /usr/lib/unity/unity-panel-service /lib/x86_64-linux-gnu/libglib-2.0.so.0.3200.3
+1         0.0002  libm-2.15.so             /usr/bin/gnome-terminal  __ceil_sse41
+1         0.0002  libnsl-2.15.so           /usr/sbin/nscd           __nis_hash
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/share/rosout/bin/rosout __lll_unlock_wake
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _L_unlock_644
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __open_nocancel
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet __pthread_init_static_tls
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet accept
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet fcntl
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_cond_init@@GLIBC_2.3.2
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_create@@GLIBC_2.2.5
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_setspecific
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pthread_sigmask
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet read
+1         0.0002  libpthread-2.15.so       /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet write
+1         0.0002  libpthread-2.15.so       /usr/bin/Xorg            pthread_mutex_unlock
+1         0.0002  libpthread-2.15.so       /usr/bin/compiz          pthread_self
+1         0.0002  libpthread-2.15.so       /usr/bin/gnome-terminal  __pthread_disable_asynccancel
+1         0.0002  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_cond_broadcast@@GLIBC_2.3.2
+1         0.0002  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_getspecific
+1         0.0002  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_mutex_trylock
+1         0.0002  libpthread-2.15.so       /usr/bin/gnome-terminal  pthread_self
+1         0.0002  libpthread-2.15.so       /usr/bin/gtk-window-decorator pthread_getspecific
+1         0.0002  libpthread-2.15.so       /usr/bin/ibus-daemon     __pthread_enable_asynccancel
+1         0.0002  libpthread-2.15.so       /usr/bin/ibus-daemon     pthread_getspecific
+1         0.0002  libpthread-2.15.so       /usr/bin/ibus-daemon     pthread_rwlock_rdlock
+1         0.0002  libpthread-2.15.so       /usr/bin/ibus-daemon     pthread_rwlock_unlock
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       __deallocate_stack
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       __do_global_dtors_aux
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       __pthread_enable_asynccancel
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       _pthread_cleanup_push_defer
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       funlockfile
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       lseek64
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       pthread_create@@GLIBC_2.2.5
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       pthread_rwlock_rdlock
+1         0.0002  libpthread-2.15.so       /usr/bin/python2.7       sem_init@@GLIBC_2.2.5
+1         0.0002  libpthread-2.15.so       /usr/bin/zeitgeist-datahub pthread_mutex_lock
+1         0.0002  libpthread-2.15.so       /usr/bin/zeitgeist-datahub pthread_mutex_unlock
+1         0.0002  libpthread-2.15.so       /usr/lib/bamf/bamfdaemon pthread_mutex_lock
+1         0.0002  libpthread-2.15.so       /usr/lib/gnome-disk-utility/gdu-notification-daemon pthread_mutex_unlock
+1         0.0002  libpthread-2.15.so       /usr/lib/gnome-settings-daemon/gnome-settings-daemon pthread_mutex_lock
+1         0.0002  libpthread-2.15.so       /usr/lib/gnome-settings-daemon/gnome-settings-daemon pthread_mutex_unlock
+1         0.0002  libpthread-2.15.so       /usr/lib/gvfs/gvfs-gdu-volume-monitor pthread_getspecific
+1         0.0002  libpthread-2.15.so       /usr/lib/gvfs/gvfs-gdu-volume-monitor pthread_mutex_lock
+1         0.0002  libpthread-2.15.so       /usr/lib/gvfs/gvfs-gdu-volume-monitor recvmsg
+1         0.0002  libpthread-2.15.so       /usr/lib/udisks/udisks-daemon __read_nocancel
+1         0.0002  libpthread-2.15.so       /usr/lib/udisks/udisks-daemon close
+1         0.0002  libpthread-2.15.so       /usr/lib/udisks/udisks-daemon pthread_mutex_lock
+1         0.0002  libpthread-2.15.so       /usr/lib/unity-lens-files/unity-files-daemon pthread_mutex_unlock
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           __pthread_disable_asynccancel
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           __pthread_mutex_unlock_usercnt
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           _pthread_cleanup_push_defer
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           pthread_mutex_lock
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           pthread_mutex_unlock
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           pthread_rwlock_unlock
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           read
+1         0.0002  libpthread-2.15.so       /usr/sbin/nscd           send
+1         0.0002  librt-2.15.so            /usr/bin/gnome-terminal  clock_gettime
+1         0.0002  librt-2.15.so            /usr/bin/nautilus        clock_gettime
+1         0.0002  libudev.so.0.13.0        /usr/lib/udisks/udisks-helper-ata-smart-collect /lib/x86_64-linux-gnu/libudev.so.0.13.0
+1         0.0002  no-vmlinux               /sbin/rpcbind            /no-vmlinux
+1         0.0002  no-vmlinux               /usr/bin/gnome-screensaver /no-vmlinux
+1         0.0002  no-vmlinux               /usr/sbin/cupsd          /no-vmlinux
+1         0.0002  no-vmlinux               /usr/sbin/rsyslogd       /no-vmlinux
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet bond::Bond::bondStatusCB(boost::shared_ptr<bond::Status_<std::allocator<void> > const> const&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet bond::Bond::flushPendingCallbacks()
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet bond::Bond::setDisconnectTimeout(double)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::function::function_obj_invoker0<ros::DefaultMessageCreator<bond::Status_<std::allocator<void> > >, boost::shared_ptr<bond::Status_<std::allocator<void> > > >::invoke(boost::detail::function::function_buffer&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_pd<bond::Status_<std::allocator<void> >*, boost::detail::sp_ms_deleter<bond::Status_<std::allocator<void> > > >::get_deleter(std::type_info const&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SerializedMessage ros::serialization::serializeMessage<bond::Status_<std::allocator<void> > >(bond::Status_<std::allocator<void> > const&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<boost::shared_ptr<bond::Status_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<boost::shared_ptr<bond::Status_<std::allocator<void> > const> const&, void>::deserialize(ros::SubscriptionCallbackHelperDeserializeParams const&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<boost::shared_ptr<bond::Status_<std::allocator<void> > const> const&, void>::getTypeInfo()
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::vector<boost::function<void ()>, std::allocator<boost::function<void ()> > >::operator=(std::vector<boost::function<void ()>, std::allocator<boost::function<void ()> > > const&)
+1         0.0002  libbondcpp.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet void ros::SubscribeOptions::init<bond::Status_<std::allocator<void> > >(std::string const&, unsigned int, boost::function<void (boost::shared_ptr<bond::Status_<std::allocator<void> > const> const&)> const&, boost::function<boost::shared_ptr<bond::Status_<std::allocator<void> > > ()> const&)
+1         0.0002  nodelet                  /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet NodeletArgumentParsing::parseArgs(int, char**)
+1         0.0002  libnodeletlib.so         /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pluginlib::ClassLoader<nodelet::Nodelet>::loadClassLibraryInternal(std::string const&, std::string const&)
+1         0.0002  libboost_fs_wrapper.so   /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pluginlib::getPackageFromLibraryPath(std::string const&)
+1         0.0002  libcv_bridge.so          /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::shared_ptr<cv_bridge::CvImage> boost::make_shared<cv_bridge::CvImage>()
+1         0.0002  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet Matrix::releaseMemory()
+1         0.0002  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet dummyinit(mesh*, behavior*, int, int)
+1         0.0002  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet triangledealloc(mesh*, float***)
+1         0.0002  libelas.so               /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet trimalloc(int)
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _GLOBAL__sub_I_planeesmestimator.cpp
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::shared_count::shared_count<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> >*, ks::DependentSharedPtr<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> > >::Deallocator2<cv_bridge::CvImage const, cv_bridge::CvImage const> >(std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> >*, ks::DependentSharedPtr<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> > >::Deallocator2<cv_bridge::CvImage const, cv_bridge::CvImage const>)
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_p<libks::SharedImageSet_<std::allocator<void> > >::~sp_counted_impl_p()
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::sp_counted_impl_pd<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> >*, ks::DependentSharedPtr<std::pair<cv::Mat_<unsigned char>, cv::Mat_<unsigned char> > >::Deallocator2<cv_bridge::CvImage const, cv_bridge::CvImage const> >::dispose()
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet cv::Mat::Mat(cv::Mat const&)
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::BaseRosQueue<unsigned char>::CallbackHelper::callbackDefault(boost::shared_ptr<libks::ImageSet_<std::allocator<void> > const> const&)
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ks::CalibrationResult::CalibrationResult(char const*, double)
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<boost::shared_ptr<libks::ImageSet_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)
+1         0.0002  libks.so                 /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet void ros::serialization::deserialize<std_msgs::Header_<std::allocator<void> >, ros::serialization::IStream>(ros::serialization::IStream&, std_msgs::Header_<std::allocator<void> >&)
+1         0.0002  libdense_stereo_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet pocoBuildManifestdensestereo__DenseStereoNodelet
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _ZNSt3mapIN3ros4TimeEN5boost6tuples5tupleINS0_12MessageEventIKN5libks15SharedImageSet_ISaIvEEEEENS5_IKN13geometry_msgs12PoseStamped_IS8_EEEENS5_IKN15message_filters8NullTypeEEESK_SK_SK_SK_SK_SK_NS3_9null_typeEEESt4lessIS1_ESaISt4pairIKS1_SM_EEEixERSQ_.constprop.1385
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::function::void_function_obj_invoker1<boost::_bi::bind_t<void, boost::_mfi::mf1<void, message_filters::Subscriber<libks::SharedImageSet_<std::allocator<void> > >, ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&>, boost::_bi::list2<boost::_bi::value<message_filters::Subscriber<libks::SharedImageSet_<std::allocator<void> > >*>, boost::arg<1> > >, void, ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&>::invoke(boost::detail::function::function_buffer&, ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::detail::function::void_function_obj_invoker1<boost::_bi::bind_t<void, boost::_mfi::mf1<void, message_filters::Synchronizer<message_filters::sync_policies::ExactTime<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType> >, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&>, boost::_bi::list2<boost::_bi::value<message_filters::Synchronizer<message_filters::sync_policies::ExactTime<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType> >*>, boost::arg<1> > >, void, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&>::invoke(boost::detail::function::function_buffer&, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::function9<void, boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const>, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const> >::operator()(boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const>, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>, boost::shared_ptr<message_filters::NullType const>) const
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > > rosbag::MessageInstance::instantiate<geometry_msgs::PoseStamped_<std::allocator<void> > >() const
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet message_filters::CallbackHelper9T<boost::shared_ptr<libks::SharedImageSet_<std::allocator<void> > const> const&, boost::shared_ptr<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&, boost::shared_ptr<message_filters::NullType const> const&>::call(bool, ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&, ros::MessageEvent<message_filters::NullType const> const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::OccupancyMapNodelet::convertPose(geometry_msgs::PoseStamped_<std::allocator<void> > const&, tf::Vector3&, tf::Quaternion&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet occupancymap::Visualization::visualizeAll(cv::Mat_<float> const&, cv::Mat_<cv::Point3_<float> > const&, occupancymap::RobustOcTree&, tf::Vector3 const&, tf::Quaternion const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>::operator=(ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>::operator=(ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const> const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet ros::SubscriptionCallbackHelperT<ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<ros::Time, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> >, std::_Select1st<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::less<ros::Time>, std::allocator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > > >::_M_erase(std::_Rb_tree_node<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >*)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<ros::Time, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> >, std::_Select1st<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::less<ros::Time>, std::allocator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > > >::_M_insert_(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<ros::Time, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> >, std::_Select1st<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::less<ros::Time>, std::allocator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > > >::_M_insert_unique(std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<ros::Time, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> >, std::_Select1st<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::less<ros::Time>, std::allocator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > > >::equal_range(ros::Time const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet std::_Rb_tree<ros::Time, std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> >, std::_Select1st<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > >, std::less<ros::Time>, std::allocator<std::pair<ros::Time const, boost::tuples::tuple<ros::MessageEvent<libks::SharedImageSet_<std::allocator<void> > const>, ros::MessageEvent<geometry_msgs::PoseStamped_<std::allocator<void> > const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, ros::MessageEvent<message_filters::NullType const>, boost::tuples::null_type> > > >::erase(ros::Time const&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet void message_filters::Synchronizer<message_filters::sync_policies::ExactTime<libks::SharedImageSet_<std::allocator<void> >, geometry_msgs::PoseStamped_<std::allocator<void> >, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType, message_filters::NullType> >::connectInput<message_filters::Subscriber<libks::SharedImageSet_<std::allocator<void> > >, message_filters::Subscriber<geometry_msgs::PoseStamped_<std::allocator<void> > >, message_filters::NullFilter<message_filters::NullType>, message_filters::NullFilter<message_filters::NullType>, message_filters::NullFilter<message_filters::NullType>, message_filters::NullFilter<message_filters::NullType>, message_filters::NullFilter<message_filters::NullType>, message_filters::NullFilter<message_filters::NullType>, message_filters::NullFilter<message_filters::NullType> >(message_filters::Subscriber<libks::SharedImageSet_<std::allocator<void> > >&, message_filters::Subscriber<geometry_msgs::PoseStamped_<std::allocator<void> > >&, message_filters::NullFilter<message_filters::NullType>&, message_filters::NullFilter<message_filters::NullType>&, message_filters::NullFilter<message_filters::NullType>&, message_filters::NullFilter<message_filters::NullType>&, message_filters::NullFilter<message_filters::NullType>&, message_filters::NullFilter<message_filters::NullType>&, message_filters::NullFilter<message_filters::NullType>&)
+1         0.0002  liboccupancy_map_nodelet.so /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet void ros::serialization::deserialize<geometry_msgs::PoseStamped_<std::allocator<void> >, ros::serialization::IStream>(ros::serialization::IStream&, geometry_msgs::PoseStamped_<std::allocator<void> >&)
+1         0.0002  libmove.so               /usr/bin/compiz          /usr/lib/compiz/libmove.so
+1         0.0002  libregex.so              /usr/bin/compiz          /usr/lib/compiz/libregex.so
+1         0.0002  libsnap.so               /usr/bin/compiz          /usr/lib/compiz/libsnap.so
+1         0.0002  libapr-1.so.0.4.6        /opt/ros/fuerte/share/rosout/bin/rosout /usr/lib/libapr-1.so.0.4.6
+1         0.0002  libaprutil-1.so.0.3.12   /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/libaprutil-1.so.0.3.12
+1         0.0002  libxklavier.so.16.2.0    /usr/lib/gnome-settings-daemon/gnome-settings-daemon /usr/lib/libxklavier.so.16.2.0
+1         0.0002  _gobject.so              /usr/bin/python2.7       /usr/lib/python2.7/dist-packages/gobject/_gobject.so
+1         0.0002  sudoers.so               /usr/bin/sudo            /usr/lib/sudo/sudoers.so
+1         0.0002  udisks-daemon            /usr/lib/udisks/udisks-daemon /usr/lib/udisks/udisks-daemon
+1         0.0002  libgvfscommon.so         /usr/lib/bamf/bamfdaemon /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+1         0.0002  libX11.so.6.3.0          /usr/bin/gnome-screensaver /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+1         0.0002  libX11.so.6.3.0          /usr/bin/nautilus        /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+1         0.0002  libX11.so.6.3.0          /usr/bin/python2.7       /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+1         0.0002  libX11.so.6.3.0          /usr/lib/gnome-disk-utility/gdu-notification-daemon /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+1         0.0002  libX11.so.6.3.0          /usr/lib/gnome-settings-daemon/gnome-settings-daemon /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+1         0.0002  libXi.so.6.1.0           /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+1         0.0002  libatk-1.0.so.0.20409.1  /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20409.1
+1         0.0002  libdbus-glib-1.so.2.2.2  /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.2.2
+1         0.0002  libgdk-3.so.0.400.2      /usr/lib/bamf/bamfdaemon /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.400.2
+1         0.0002  libgio-2.0.so.0.3200.3   /usr/bin/nautilus        /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+1         0.0002  libgio-2.0.so.0.3200.3   /usr/lib/gnome-disk-utility/gdu-notification-daemon /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+1         0.0002  libgio-2.0.so.0.3200.3   /usr/lib/gvfs/gvfs-gdu-volume-monitor /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+1         0.0002  libgio-2.0.so.0.3200.3   /usr/lib/unity-lens-applications/unity-applications-daemon /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3200.3
+1         0.0002  libgobject-2.0.so.0.3200.3 /usr/bin/gnome-screensaver /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+1         0.0002  libgobject-2.0.so.0.3200.3 /usr/bin/gtk-window-decorator /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+1         0.0002  libgobject-2.0.so.0.3200.3 /usr/bin/nautilus        /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+1         0.0002  libgobject-2.0.so.0.3200.3 /usr/lib/unity/unity-panel-service /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3200.3
+1         0.0002  libgtk-x11-2.0.so.0.2400.10 /usr/bin/python2.7       /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.10
+1         0.0002  libpangocairo-1.0.so.0.3000.0 /usr/bin/gnome-terminal  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3000.0
+1         0.0002  libraw1394.so.11.0.1     /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet /usr/lib/x86_64-linux-gnu/libraw1394.so.11.0.1
+1         0.0002  libstartup-notification-1.so.0.0.0 /usr/bin/compiz          /usr/lib/x86_64-linux-gnu/libstartup-notification-1.so.0.0.0
+1         0.0002  libxcb.so.1.1.0          /usr/bin/nautilus        /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+1         0.0002  libxcb.so.1.1.0          /usr/bin/python2.7       /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+1         0.0002  libxcb.so.1.1.0          /usr/lib/gnome-settings-daemon/gnome-settings-daemon /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+1         0.0002  libcvd.so.0.8            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet CVD::Internal::FontData::FontData()
+1         0.0002  libcvd.so.0.8            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _GLOBAL__sub_I_deinterlacebuffer.cc
+1         0.0002  libcvd.so.0.8            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _GLOBAL__sub_I_gradient.cc
+1         0.0002  libcvd.so.0.8            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _GLOBAL__sub_I_text.cxx
+1         0.0002  libcvd.so.0.8            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _GLOBAL__sub_I_two_thirds_sample.cc
+1         0.0002  libcvd.so.0.8            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet _GLOBAL__sub_I_videosource_nov4lbuffer.cc
+1         0.0002  liboctomap.so            /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomap::Pointcloud::~Pointcloud()
+1         0.0002  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Pose6D::Pose6D()
+1         0.0002  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Pose6D::inv() const
+1         0.0002  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Quaternion::Quaternion(octomath::Quaternion const&)
+1         0.0002  liboctomath.so           /opt/ros/fuerte/stacks/nodelet_core/nodelet/bin/nodelet octomath::Quaternion::norm() const
+1         0.0002  cupsd                    /usr/sbin/cupsd          /usr/sbin/cupsd
+1         0.0002  ntpd                     /usr/sbin/ntpd           /usr/sbin/ntpd
+1         0.0002  [vdso]                   (tgid:1946 range:0x7fff729ff000-0x7fff72a00000) /usr/sbin/nscd           [vdso] (tgid:1946 range:0x7fff729ff000-0x7fff72a00000)
+1         0.0002  [vdso]                   (tgid:2251 range:0x7fffb51d8000-0x7fffb51d9000) /usr/lib/udisks/udisks-daemon [vdso] (tgid:2251 range:0x7fffb51d8000-0x7fffb51d9000)

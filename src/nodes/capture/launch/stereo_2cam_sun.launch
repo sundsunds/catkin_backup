@@ -1,0 +1,16 @@
+<launch>
+	<!--<arg name="autoShutterSettings" value="0.15,0.98,4" />-->
+	<!--<arg name="autoShutterSettings" value="0.10,0.98,4" />-->
+	<!-- <arg name="autoShutterSettings" value="0.12,0.98,4" /> -->
+	<!--arg name="autoShutterSettings" value="0.25,0.75,1.5" /-->
+	<arg name="autoShutterSettings" value="0.10,0.98,4" />
+
+	<node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"/>  
+
+	<!--<node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -d -g -a $(arg autoShutterSettings)" output="screen" /> -->
+
+
+	 <node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -s -H -g -a $(arg autoShutterSettings)" output="screen" />
+
+	<!--raj node pkg="capture" type="capture" name="capture" args="-s -a $(arg autoShutterSettings)" output="screen" /--> 
+</launch>

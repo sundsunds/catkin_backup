@@ -1,0 +1,8 @@
+prefix=/home/sun/catkin_ws/src/nodes/build-capture-Desktop-Default/devel
+
+Name: capture
+Description: Description of capture
+Version: 0.0.1
+Cflags: -I/home/sun/catkin_ws/src/nodes/capture/src
+Libs: -L/home/sun/catkin_ws/src/nodes/build-capture-Desktop-Default/devel/lib -lcapture_nodelet
+Requires: sensor_msgs libks libks_msgs

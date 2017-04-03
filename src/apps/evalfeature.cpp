@@ -1,0 +1,272 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstdio>
+#include <opencv2/opencv.hpp>
+#include <boost/smart_ptr.hpp>
+
+#include "libks/base/sdlwindow.h"
+#include "libks/imageio/filequeue.h"
+#include "libks/feature/evaluation/clusterevaluation.h"
+#include "libks/feature/evaluation/gauglitztruth.h"
+#include "libks/feature/evaluation/repeatabilityevaluation.h"
+#include "libks/stereo/stereorectification.h"
+
+using namespace std;
+using namespace cv;
+using namespace ks;
+using namespace boost;
+
+class EvalFeature {
+public:
+	EvalFeature(): frame(0) {}
+
+	int run(int argc, char** argv) {
+		if(!parseOptions(argc, argv))
+			return 1;
+		
+		ClusterEvaluation clusterEval;
+		RepeatabilityEvaluation repEval;
+		unsigned long sumFeatures = 0, clusterCount = 0;
+		double clusterSum = 0, repeatabilitySum = 0.0;
+		
+		if(!average)
+			cout << "# frame, points, clustering, repeatability" << endl;
+		
+		unsigned int repeatCount = 0;
+		
+		while(readNextPoints()) {
+			if(warpFile != "") {
+				// Perform ground truth warping
+				if(!readNextWarp()) {
+					cerr << "Unexpected end of warp file" << endl;
+					break;
+				}
+				performWarp();
+			}
+			
+			// Count number of features
+			sumFeatures += points.size();
+			
+			// Perform clustering evaluation
+			Rect roi = mikolajczyk ? Rect(0, 0, 800, 640) : // Todo: make variable
+				Rect(textureROI.x1, textureROI.y1, textureROI.x2 - textureROI.x1, textureROI.y2 - textureROI.y1);
+			double cluster = clusterEval.evaluate(points, roi);
+			if(cluster >= 0) {
+				clusterSum += cluster;
+				clusterCount ++;
+			}
+			
+			// Perform repeatability evaluation
+			
+			if(frame %500 != 0) {
+				double repeat;
+				if(points.size() == 0 || lastPoints.size() == 0)
+					repeat = 0.0; //No information for first frame
+				else repeat = repEval.evaluate(lastPoints, points);
+				
+				repeatabilitySum += repeat;
+				repeatCount++;
+				
+				if(!average)
+					cout << frame << " " << points.size() << " " << cluster << " " << repeat << endl;
+			}
+		}
+		
+		if(average) {
+			// cout << "# points, clustering, repeatability" << endl;
+			// Print averages of collected statistics
+			cout << sumFeatures / double(frame+1) << " "
+				<< clusterSum / clusterCount << " "
+				<< repeatabilitySum / repeatCount << endl;
+		}
+		
+		return 0;
+	}
+
+private:
+	bool average;
+	string inputFile;
+	string warpFile;
+	string imageDir;
+	string calibFile;
+	bool interactive;
+	bool mikolajczyk;
+	
+	fstream inputStrm;
+	fstream warpStrm;
+	int frame;
+	vector<Point2f> points;
+	vector<Point2f> lastPoints;
+	
+	Mat_<double> warpMatrix;
+	scoped_ptr<SDLWindow> window;
+	scoped_ptr<MonoFileQueue8U> imageQueue;
+	scoped_ptr<StereoRectification> rect;
+
+	// Parses all program options
+	bool parseOptions(int argc, char** argv) {
+		average = false;
+		interactive = false;
+		mikolajczyk = false;
+		
+		char c;
+		while ((c = getopt(argc, argv, "aw:s:r:im")) != -1) {
+			switch(c) {
+				case 'a': average = true; break;
+				case 'w': warpFile = optarg; break;
+				case 's': imageDir = optarg; break;
+				case 'r': calibFile = optarg; break;
+				case 'i': interactive = true; break;
+				case 'm': mikolajczyk = true; break;
+				default: return false;
+			}
+		}
+		
+		if(argc - optind != 1) {
+			cerr << "Usage: " << endl
+				 << argv[0] << " [OPTIONS] INPUT-FILE" << endl << endl
+				 << "Options: " << endl
+				 << "-a       Calculate the average measure for the entire sequance" << endl
+				 << "-w FILE  Apply the given warp ground truth and truncate features" << endl
+				 << "-s DIR   Shows the warped input images from DIR and feature points" << endl
+				 << "-r FILE  Use given calibration file for mono-rectification" << endl
+				 << "-i       Interactive" << endl
+				 << "-m       Apply to Mikolajczyk dataset (default: Gauglitz)" << endl;
+			return false;
+		}
+		
+		inputFile = argv[argc-1];
+		return true;
+	}
+
+	// Reads all points for the current frame
+	bool readNextPoints() {
+		if(!inputStrm.is_open())
+			inputStrm.open(inputFile.c_str(), ios::in);
+		
+		string line;
+		lastPoints.clear();
+		if(points.size() != 0)
+			lastPoints.insert(lastPoints.begin(), points.begin(), points.end());
+		points.clear();
+		
+		do {
+			getline(inputStrm, line);
+			
+			if(inputStrm.eof())
+				return false; //We reached the end
+			else if(inputStrm.fail()) {
+				cerr << "Error reading input file" << endl;
+				return false;
+			}
+		}
+		while(line.length() != 0 && line[0] == '#');
+		
+		int pointsCount, readOffset;
+		const char* parsePos = line.c_str();
+		
+		sscanf(parsePos, "%d %d%n", &frame, &pointsCount, &readOffset);
+		parsePos += readOffset;
+		
+		for(int i=0; i<pointsCount; i++) {
+			float x, y;
+			sscanf(parsePos, " %f %f%n", &x, &y, &readOffset);
+			parsePos += readOffset;
+			points.push_back(Point2f(x, y));
+		}
+		
+		return true;
+	}
+	
+	// Reads the next transformation matrix from the warp ground truth
+	bool readNextWarp() {
+		if(!warpStrm.is_open())
+			warpStrm.open(warpFile.c_str(), ios::in);
+		
+		string line;
+		
+		getline(warpStrm, line);
+			
+		if(warpStrm.eof())
+			return false; //We reached the end
+		else if(warpStrm.fail()) {
+			cerr << "Error reading input file" << endl;
+			return false;
+		}
+
+		warpMatrix = Mat_<double>(3, 3, 0.0);
+		if(sscanf(line.c_str(), "%lf %lf %lf %lf %lf %lf %lf %lf %lf", &warpMatrix(0, 0),
+			&warpMatrix(0, 1), &warpMatrix(0, 2), &warpMatrix(1, 0), &warpMatrix(1, 1),
+			&warpMatrix(1, 2), &warpMatrix(2, 0), &warpMatrix(2, 1), &warpMatrix(2, 2)) != 9)
+			return false;
+		
+		if(mikolajczyk) {
+			Mat_<double> invMat = Mat_<double>(3, 3, 0.0);
+			invert(warpMatrix, invMat);
+			warpMatrix = invMat;
+		}
+				
+		return true;
+	}	
+	
+	// Applies the ground truth warp
+	void performWarp() {
+		// Rectify points
+		if(calibFile != "") {
+			if(rect.get() == NULL)
+				rect.reset(new StereoRectification(CalibrationResult(calibFile.c_str())));
+			for(unsigned int i=0; i<points.size(); i++)
+				points[i] = rect->highPrecisionRectifyLeftPoint(points[i]);
+		}
+		
+		// Warp points
+		Mat_<Point2f> pointsProj(points.size(), 1);
+		perspectiveTransform(Mat(points), pointsProj, warpMatrix);
+		points.clear();
+		for(int i=0; i<pointsProj.rows; i++)
+			if(mikolajczyk || (pointsProj(i).x >= textureROI.x1 && pointsProj(i).x < textureROI.x2 &&
+				pointsProj(i).y >= textureROI.y1 && pointsProj(i).y < textureROI.y2))
+				points.push_back(pointsProj(i));
+		
+		// Create visual output
+		if(imageDir != "") {
+			if(imageQueue.get() == NULL || window.get() == NULL) {
+				imageQueue.reset(new MonoFileQueue8U(imageDir.c_str()));
+				window.reset(new SDLWindow(640, 480, "Feature evaluation"));
+			}
+
+			MonoFrame8U::ConstPtr frame = imageQueue->pop();
+			Mat_<unsigned char> rectFrame;
+			if(calibFile != "")
+				rect->rectifyLeftImage(*frame, &rectFrame);
+			else rectFrame = *frame;
+			Mat_<unsigned char> warpedFrame(mikolajczyk ? frame->rows : dst_h, mikolajczyk ? frame->cols : dst_w, (unsigned char)0);
+			if(window->getSize() != warpedFrame.size())
+				window->resize(warpedFrame.size());
+			warpPerspective(rectFrame, warpedFrame, warpMatrix, warpedFrame.size());
+			Mat_<Vec3b> warpedColor(warpedFrame.rows, warpedFrame.cols);
+			cvtColor(warpedFrame, warpedColor, CV_GRAY2BGR);
+			
+			if(!mikolajczyk)
+				rectangle(warpedColor, Point2f(textureROI.x1, textureROI.y1), Point2f(textureROI.x2, textureROI.y2),
+					(Scalar) Vec3b(255, 0, 0), 1);
+					
+			for(unsigned int i=0; i<points.size(); i++) {
+				rectangle(warpedColor, Point2f(points[i].x-1, points[i].y-1),
+						Point2f(points[i].x+1, points[i].y+1), (Scalar) Vec3b(0, 0, 255), CV_FILLED);			
+			}
+			window->displayImage(warpedColor);
+			
+			if(interactive)
+				window->waitForKey();
+			else window->processEvents(false);
+		}
+	}
+};
+
+
+int main(int argc, char** argv) {
+	EvalFeature eval;
+	return eval.run(argc, argv);
+}

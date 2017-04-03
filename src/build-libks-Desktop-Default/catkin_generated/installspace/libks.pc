@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: libks
+Description: Description of libks
+Version: 0.0.1
+Cflags: -I/usr/local/include -I/usr/include/SDL
+Libs: -L/usr/local/lib -lks
+Requires: 

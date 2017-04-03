@@ -1,0 +1,6 @@
+add_library(dense_stereo_nodelet
+	densestereonodelet.cpp
+	densestereonodelet.h)
+#rosbuild_link_boost(dense_stereo_nodelet system filesystem thread)
+
+target_link_libraries(dense_stereo_nodelet ${EXTERNAL_LIBRARIES})

@@ -1,0 +1,23 @@
+<package>
+	<description brief="sparsestereo">
+
+		Performs semi-sparse stereo matching
+
+	</description>
+	<author>Konstantin Schauwecker</author>
+	<license></license>
+	<review status="unreviewed" notes=""/>
+	<url></url>
+
+	<depend package="roscpp"/>
+	<depend package="libks"/>
+	<depend package="sensor_msgs"/>
+	<depend package="nodelet"/>
+	<depend package="opencv2"/>
+	<depend package="tf"/>
+	
+	<export>
+		<nodelet plugin="${prefix}/nodelet_plugins.xml" />
+	</export>
+</package>
+

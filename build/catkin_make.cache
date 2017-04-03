@@ -1,0 +1,2 @@
+apps:ethzasl_ptam/ethzasl_ptam:ethzasl_ptam/ptam:ethzasl_ptam/ptam_com:ethzasl_ptam/rqt_ptam:libelas:libks:libks_msgs:lsd_slam/lsd_slam:lsd_slam/lsd_slam_core:lsd_slam/lsd_slam_viewer:nodes/capture:nodes/densestereo:nodes/sparsestereo
+-DCATKIN_DEVEL_PREFIX=/home/sun/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/sun/catkin_ws/install -G Unix Makefiles

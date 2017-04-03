@@ -1,0 +1,9 @@
+<launch>
+
+	<node pkg="pointgrey_camera_driver" type="nodelet" name="manager"  args="manager" output="screen"/>
+
+	<node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -H -g -a $(arg autoShutterSettings)" output="screen">
+
+             <param name="left_camera_filename" value="/home/sun/calibration_stereo/calib_front_left.yaml" />            
+        </node>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/rahome/ait_jellal/projects/ws_mav/src/nodes/libviso2/devel
+
+Name: libviso2
+Description: Description of libviso2
+Version: 0.0.1
+Cflags: -I/rahome/ait_jellal/projects/ws_mav/src/nodes/libviso2/libviso2/src
+Libs: -L/rahome/ait_jellal/projects/ws_mav/src/nodes/libviso2/devel/lib -lviso2
+Requires: 

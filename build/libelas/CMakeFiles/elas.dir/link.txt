@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O2 -g -DNDEBUG  -shared -Wl,-soname,libelas.so -o /home/sun/catkin_ws/devel/lib/libelas.so CMakeFiles/elas.dir/src/descriptor.o CMakeFiles/elas.dir/src/elas.o CMakeFiles/elas.dir/src/filter.o CMakeFiles/elas.dir/src/matrix.o CMakeFiles/elas.dir/src/triangle.o 

@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 2.4.6)
+include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+include(../libks/common.cmake)
+
+rosbuild_init()
+
+# directories
+set (LIBELAS_SRC_DIR src)
+
+# include directory
+include_directories("${LIBELAS_SRC_DIR}")
+
+# build library
+rosbuild_add_library(elas
+	src/descriptor.h
+	src/descriptor.cpp
+	src/elas.h
+	src/elas.cpp
+	src/filter.h
+	src/filter.cpp
+	src/matrix.h
+	src/matrix.cpp
+	src/timer.h
+	src/triangle.h
+	src/triangle.cpp
+)
+
+# build demo program
+
+rosbuild_add_executable(elas_demo src/main.cpp)
+target_link_libraries(elas_demo elas)

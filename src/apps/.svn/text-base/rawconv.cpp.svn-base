@@ -1,0 +1,296 @@
+#include <opencv2/opencv.hpp>
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include "libks/imageio/tvrawimageio.h"
+#include "libks/imageio/rawimage.h"
+#include "libks/imageio/rawsequence.h"
+#include "libks/base/exception.h"
+#include "libks/imageproc/colorcoder.h"
+
+using namespace std;
+using namespace cv;
+using namespace ks;
+
+// A converter for raw images and sequences
+class RawConverter {
+public:
+	RawConverter(bool normalise, float scale, bool rainbow, float rainbowMin, float rainbowMax, bool rainbowLegend) {
+		this->normalise = normalise;
+		this->scale = scale;
+		this->rainbow = rainbow;
+		this->rainbowMin = rainbowMin;
+		this->rainbowMax = rainbowMax;
+		this->rainbowLegend = rainbowLegend;
+	}
+
+	// Adds a new image to the sequence that should be converted
+	void addImage(const char* file) {
+		cout << "File " << (sequence.getCount()+1) << ": ";
+		if(!tryLoadTVRawImage(file) &&
+			!tryLoadRawImage(file) &&
+			!tryLoadRawSequence(file))
+			loadCVImage(file);
+		cout << endl;
+	}
+
+	// Converts the images and saves them in the given file
+	void convertTo(const char* out, bool raw) {
+		if(scale!=1.0) {
+			cout << "Scaling" << endl;
+			for(unsigned int i = 0; i < sequence.getCount(); i++)
+				sequence[i].addAndScale(0, scale);
+		}
+		if(sequence.getCount() == 1)
+			convertImage(out, raw);
+		else convertSequence(out, raw);
+		
+		float min, max;
+		findMinMax(min, max);
+		cout << "Min: " << min << ", Max: " << max << endl;
+	}
+	
+private:
+	// Returns true if this is a raw image by Tobi Vaudrey
+	bool isTVRawImage(const char* file) {
+		fstream strm(file, ios::in);
+		char c = (char)strm.get();
+		return c == '#';
+	}
+
+	// Tries loading a Tobi Vaudrey raw image
+	bool tryLoadTVRawImage(const char* file){
+		if(!isTVRawImage(file))
+			return false;
+	
+		// This must be a TV Raw Image
+		cout << "TV Raw Image";
+		TvRawImageIO tvRaw;
+		TvImageSize size;
+		const char* data = tvRaw.loadRawDataImage(const_cast<char*>(file), size);
+		if(size.nChannels != 1)
+			throw ks::Exception("Only greyscale images are supported");
+		else if(size.dataType != TV_DATATYPE_32F)
+			throw ks::Exception("Only float datatype is supported");
+		sequence.add(RawImage(size.width, size.height, (float*)data));
+		return true;
+	}
+
+	// Tries to load a raw image
+	bool tryLoadRawImage(const char* file) {
+		try {
+			RawImage image(file, false);
+			cout << "Raw Image";
+			// This must be a valid raw image
+			sequence.add(image);
+			return true;
+		}
+		catch(RawImage::DecodingException) {
+			return false;
+		}
+	}
+	
+	// Tries loading a raw sequence
+	bool tryLoadRawSequence(const char* file) {
+		try {			
+			RawSequence seq(file);
+			cout << "Raw Sequence";
+			// This must be a valid raw sequence
+			for(unsigned int i=0; i<seq.getCount();i++) {
+				sequence.add(seq[i]);
+			}
+			return true;
+		}
+		catch(RawSequence::DecodingException) {
+			return false;
+		}
+	}
+	
+	// Loads an OpenCV image
+	void loadCVImage(const char* file) {
+		// This is a normal image
+		cout << "Image";
+		Mat_<float> image = imread(file, CV_LOAD_IMAGE_UNCHANGED);
+		sequence.add(RawImage(image));
+	}
+
+	// Nomralises a float image
+	void normaliseImage(Mat& image) {
+		if(normalise) {
+			cout << "Normalising image" << endl;
+			normalize(image, image, 0, 255, NORM_MINMAX);
+		}
+	}
+	
+	// Finds the niminum and maximum value in a raw image
+	void getMinMax(Mat_<float>& img, float &min, float &max) {
+		min = max = img(0, 0);
+		
+		for(int y = 0; y<img.rows; y++)
+			for(int x = 0; x<img.cols; x++) {
+			if(img(y, x) < min)
+				min = img(y, x);
+			else if(img(y, x) > max)
+				max = img(y, x);
+		}
+	}
+
+	// Normalises the image sequence
+	void normaliseSequence() {
+		if(normalise) {
+			cout << "Normalising raw sequence" << endl;
+			float min, max;
+			findMinMax(min, max);
+			
+			float factor = 1.0 / (max - min);
+			
+			for(unsigned int i = 0; i < sequence.getCount(); i++)
+				sequence[i].addAndScale(-min, factor);
+		}
+	}
+	
+	// Maps the image data to a rainbow imap, if enabled
+	Mat* mapToRainbow(Mat_<float>& src) {
+		if(rainbow) {
+			if(rainbowMax == -1)
+				findMinMax(rainbowMin, rainbowMax);
+			ColorCoder coder(rainbowMin, rainbowMax, false, false);
+			
+			Mat_<Vec3b>* dst;
+			if(rainbowLegend)
+				dst = new Mat_<Vec3b>(coder.createLegendBorder(src.cols, src.rows));
+			else dst = new Mat_<Vec3b>(src.rows, src.cols, Vec3b(0, 0, 0));
+			
+			Mat_<Vec3b> dstRect = (*dst)(Rect(0, 0, src.cols, src.rows));
+			coder.codeImage(src, dstRect);
+			return dst;
+		}
+		else return new Mat_<float>(src);
+	}
+	
+	// Finds the minimum and maximum value in the sequence
+	void findMinMax(float& min, float& max) {
+		float globalMin = 0, globalMax = 0;
+		for(unsigned int i = 0; i < sequence.getCount(); i++) {
+			float min = 0, max = 0;
+			sequence[i].findMinMax(min, max);
+			if(i == 0 || min < globalMin)
+				globalMin = min;
+			if(i == 0 || max > globalMax)
+				globalMax = max;
+		}
+		min = globalMin;
+		max = globalMax;
+	}
+
+	// Converts a single image
+	void convertImage(const char* out, bool raw) {
+		if(!raw) {
+			cout << "Converting to plain image" << endl;
+			Mat_<float>& image = sequence[0].toMat();
+			normaliseImage(image);
+			cout << "Writing image" << endl;
+			Mat* dstImage = mapToRainbow(image);
+			imwrite(out, *dstImage);
+			delete dstImage;
+		} else {
+			cout << "Converting to raw image" << endl;
+			normaliseSequence();
+			cout << "Writing image" << endl;
+			sequence[0].save(out);
+		}
+	}
+	
+	// Converts the whole sequence
+	void convertSequence(const char* out, bool raw) {
+		if(!raw) {
+			cout << "Converting from raw sequence" << endl;
+			unsigned int rowLen = (int)ceil(sqrt(sequence.getCount()));
+			unsigned int colLen = (sequence.getCount()-1)/rowLen + 1;
+			unsigned int width = sequence[0].getWidth(),
+				height = sequence[0].getHeight();
+			
+			Mat_<float> image(colLen*sequence[0].getHeight(),
+				rowLen*sequence[0].getWidth(), 0.0);
+			
+			for(unsigned int tile=0; tile<sequence.getCount(); tile++) {
+				unsigned int col = tile%rowLen;
+				unsigned int row = tile/rowLen;
+				
+				Mat_<float>& tileImage= sequence[tile].toMat();
+				for(unsigned int y=0;y<height;y++)
+					memcpy(image.row(y + row*height).data + col*width*sizeof(float),
+						tileImage.row(y).data, sizeof(float) * width);
+			}
+			normaliseImage(image);
+			Mat* dstImage = mapToRainbow(image);
+			cout << "Writing sequence" << endl;
+			imwrite(out, *dstImage);
+			delete dstImage;
+		} else {
+			cout << "Converting to raw sequence" << endl;
+			normaliseSequence();
+			cout << "Writing sequence" << endl;
+			sequence.save(out);
+		}
+	}
+	
+	bool normalise;
+	bool rainbow;
+	float rainbowMin;
+	float rainbowMax;
+	bool rainbowLegend;
+	float scale;
+	RawSequence sequence;
+};
+
+int main(int argc, char** argv) {
+	// Parse options
+	bool normalise = false;
+	float scale = 1.0;
+	bool raw = false;
+	bool rainbow = false;
+	bool legend = true;
+	float rainMin= -1, rainMax = -1;
+	char c;
+	
+	while ((c = getopt(argc, argv, "ns:bi:rl")) != -1) {
+		switch (c) {
+			case 'n': normalise = true; break;
+			case 's': scale = atof(optarg); break;
+			case 'r': raw = true; break;
+			case 'b': rainbow = true; break;
+			case 'l': legend = false;break;
+			case 'i': 
+				if(optarg != NULL)
+					sscanf(optarg, "%f:%f", &rainMin, &rainMax);
+				break;
+			default: argc = 0; break;
+		}
+	}
+
+	// Print usage note if options are invalid
+	if(argc - optind < 2) {
+		cerr << "Usage: " << argv[0] << " [OPTIONS] INPUT_FILES... OUTPUT_FILE" << endl << endl;
+		cerr << "Available Options: " << endl;
+		cerr << "-n          Normalise output image ([0;1] for raw images)" << endl;
+		cerr << "-s X        Scale by factor X" << endl;
+		cerr << "-r          Convert to raw image" << endl;
+		cerr << "-b          Convert to rainbow colors" << endl;
+		cerr << "-l          Disable rainbow legend" << endl;
+		cerr << "-i min:max  Rainbow color interval" << endl; 
+		return 1;
+	}
+	else {
+		try {
+			// Start conversion
+			RawConverter converter(normalise, scale, rainbow, rainMin, rainMax, legend);
+			for(int i=optind; i<argc-1; i++)
+				converter.addImage(argv[i]);
+			converter.convertTo(argv[argc-1], raw);
+			return 0;
+		} catch(const exception &ex) {
+			cerr << "Exception occured: " << ex.what() << endl;
+		}
+	}
+}

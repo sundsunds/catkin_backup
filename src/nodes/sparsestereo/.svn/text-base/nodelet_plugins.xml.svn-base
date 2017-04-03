@@ -1,0 +1,5 @@
+<library path="lib/libsparse_stereo_nodelet">
+	<class name="sparsestereo/SparseStereoNodelet" type="sparsestereo::SparseStereoNodelet" base_class_type="nodelet::Nodelet">
+		<description>Nodelet for sparse stereo matching</description>
+	</class>
+</library>

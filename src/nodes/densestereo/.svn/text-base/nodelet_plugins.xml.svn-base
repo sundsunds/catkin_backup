@@ -1,0 +1,5 @@
+<library path="lib/libdense_stereo_nodelet">
+	<class name="densestereo/DenseStereoNodelet" type="densestereo::DenseStereoNodelet" base_class_type="nodelet::Nodelet">
+		<description>Nodelet for dense stereo matching</description>
+	</class>
+</library>

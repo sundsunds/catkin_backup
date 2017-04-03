@@ -1,0 +1,24 @@
+<package>
+	<description brief="apps">
+
+		Various stand alone applications
+
+	</description>
+	<author>Konstantin Schauwecker</author>
+	<license></license>
+	<review status="unreviewed" notes=""/>
+	<url></url>
+
+	<depend package="roscpp"/>
+	<depend package="rospy"/>
+	<depend package="tf"/>
+	<depend package="libks"/>
+	<depend package="rosbag"/>
+	<!--depend package="pximu"/-->
+	<depend package="sensor_msgs"/>
+	<depend package="opencv2"/>
+	<depend package="rosconsole"/>
+	<rosdep name="octomap" />
+</package>
+
+

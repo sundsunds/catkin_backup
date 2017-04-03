@@ -1,0 +1,6 @@
+<launch>
+	<arg name="autoShutterSettings" value="0.15,0.98,4" />
+	<node pkg="nodelet" type="nodelet" name="manager"  args="manager" launch-prefix="xterm -e" respawn="true" output="screen"/>
+	<node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -s -H -a $(arg autoShutterSettings)" launch-prefix="xterm -e" respawn="true" output="screen">
+        </node>
+</launch>

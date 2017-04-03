@@ -1,0 +1,22 @@
+<package>
+  <name>libelas</name>
+  <version>0.0.1</version>
+  <description>ELAS stereo SGM</description>
+
+  <license></license>
+  <author>KIT</author>
+  <maintainer email="radouane.ait-jellal@uni-tuebingen.de">Ait Jellal</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>opencv2</build_depend> 
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>opencv2</run_depend> 
+  
+  <export>
+      <cpp cflags="-I${prefix}/inc " lflags="-L${prefix}/lib -lelas"/>
+  </export>
+
+</package>

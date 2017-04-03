@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/sun/catkin_ws/src/build-libks-Desktop-Default/devel/setup.sh

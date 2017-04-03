@@ -1,0 +1,189 @@
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/smart_ptr.hpp>
+#include <iostream>
+#include <opencv2/opencv.hpp>
+#include <boost/timer.hpp>
+#include <fstream>
+#include "libks/imageio/filequeue.h"
+#include "libks/imageio/flycapqueue.h"
+#include "libks/base/sdlwindow.h"
+#include "libks/feature/fakefast.h"
+#include "libks/feature/ssefast.h"
+#include "libks/feature/faster.h"
+#include "libks/feature/extendedfast.h"
+#include "libks/imageproc/imageconversion.h"
+
+using namespace ks;
+using namespace std;
+using namespace boost;
+using namespace boost::posix_time;
+using namespace cv;
+
+class Feature {
+public:
+    Feature(): frame(0) {}
+
+	int run(int argc, char** argv) {
+		if(!parseOptions(argc, argv))
+			return 1;
+			
+		//SDLWindow window(640, 480, "Features");
+
+		scoped_ptr<MonoImageQueue8U> imgQueue;
+		if(capture)
+			imgQueue.reset(new MonoFlyCapQueue8U());
+		else imgQueue.reset(new MonoFileQueue8U(inputDir.c_str()));
+
+		Mat_<Vec3b> screen;
+		Mat_<char> charImg;
+		int frames = 0;
+		int featuresCount = 0;
+		ptime lastTime = microsec_clock::local_time();
+		
+		ExtendedFAST exFast(true, 10, algorithmParam > 0 ? algorithmParam : 1.0, false);
+		
+		while(true) {
+			// Load input images
+			Mat_<unsigned char> left = imgQueue->pop();
+			
+			if(left.data == NULL)
+				break; // No more images
+			
+			if(screen.size() != left.size()) {
+				screen = Mat_<Vec3b>(left.size());
+				charImg = Mat_<char>(left.size());
+			}
+			cvtColor(left, screen, CV_GRAY2BGR);
+			
+			vector<KeyPoint> keypoints;
+			Mat_<unsigned char> edgeMap(left.size(), 0);
+			
+			for(int i=0; i<100; i++) {
+				keypoints.clear();
+				//FAST(left, keypoints, /*algorithmParam > 0 ? algorithmParam :*/ 10, true);
+				//FASTER(left, keypoints, algorithmParam > 0 ? algorithmParam : 20);
+				//exFast.detect(left, keypoints);
+				
+				/*StarDetector detector; //Use presets
+				detector(left, keypoints);*/
+				/*SURF detector;
+				detector(left, Mat(), keypoints);*/
+												
+				//FakeFast fast;
+				SSEFast fast;
+				ImageConversion::unsignedToSigned(left, &charImg);
+				fast.detect(charImg, 10, 9, &keypoints, true);
+				
+				frames++; frame++;
+			}
+			
+			vector<Point2f> points;
+			KeyPoint::convert(keypoints, points);
+			writePoints(points);
+			
+			featuresCount+=points.size();
+			
+			time_duration elapsed = (microsec_clock::local_time() - lastTime);
+			if(elapsed.total_seconds() >= 1 || interactive) {
+				cout << "Fps: " << frames/(elapsed.total_microseconds()/1.0e6)
+					<< "; Avg. Features: " << featuresCount/float(frames) << endl;
+				frames = 0;
+				featuresCount = 0;
+				lastTime = microsec_clock::local_time();
+			}
+			
+			//goodFeaturesToTrack(left, points, 1000, 0.01, 5, Mat(), 3, false);
+			
+			// Visualize
+			for(unsigned int i=0; i<points.size(); i++) {
+				rectangle(screen, Point2f(points[i].x-1, points[i].y-1),
+					Point2f(points[i].x+1, points[i].y+1), (Scalar) Vec3b(0, 0, 255), CV_FILLED);
+				}
+			
+			if(writePath != "") {
+				char fileName[256];
+				snprintf(fileName, sizeof(fileName), "%s/image%05d.png", writePath.c_str(), frame);
+				imwrite(fileName, screen);
+			}
+			
+			//window.displayImage(edgeMap);
+			/*window.displayImage(screen);
+			if(interactive)
+			    window.waitForKey();
+			else window.processEvents(false);*/
+		}	
+		
+		return 0;
+
+	}
+
+private:
+	string inputDir;
+	bool capture;
+	bool interactive;
+	string pointsFile;
+	double algorithmParam;
+	string writePath;
+	
+	int frame;
+	fstream pointsFileStrm;
+	
+	bool parseOptions(int argc, char** argv) {
+		capture = false;
+		interactive = false;
+		algorithmParam = -1.0;
+		writePath = "";
+		
+		char c;
+		while ((c = getopt(argc, argv, "cip:s:w:")) != -1) {
+			switch(c) {
+				case 'c': capture = true; break;
+				case 'i': interactive = true; break;
+				case 'p': pointsFile = optarg; break;
+				case 's': algorithmParam = atof(optarg); break;
+				case 'w': writePath = optarg; break;
+				default: return false;
+			}
+		}
+		
+		if((capture && argc - optind != 0) || (!capture && argc - optind != 1)) {
+			cerr << "Usage: " << endl
+				 << argv[0] << " [OPTIONS] [INPUT-DIR]" << endl << endl
+				 << "Options: " << endl
+				 << "-c       Capture from camera" << endl
+				 << "-i       Interactive" << endl
+				 << "-p FILE  Output points to file" << endl
+				 << "-s VAL   Sets primary feature algorithm parameter to given value" << endl
+				 << "-w DIR   Write results to directory" << endl;
+			return false;
+		}
+		
+		if(!capture)
+			inputDir = argv[argc-1];
+		return true;
+	}
+	
+	// Write matched points to file
+	void writePoints(const vector<Point2f>& points) {
+		if(pointsFile == "")
+			return; // Not activated
+		
+		if(!pointsFileStrm.is_open()) {
+			pointsFileStrm.open(pointsFile.c_str(), ios::out);
+			pointsFileStrm << "# Frame; Points Count; [X; Y]*" << endl;
+		}
+		if(pointsFileStrm.fail())
+			throw ks::Exception("Error writing points");
+		
+		pointsFileStrm << frame << " " << points.size();
+		for(unsigned int i=0; i<points.size(); i++)
+			pointsFileStrm  <<  " " << points[i].x << " " << points[i].y;
+		pointsFileStrm << endl;
+	}
+};
+
+
+int main(int argc, char** argv) {
+	Feature feat;
+	return feat.run(argc, argv);
+}

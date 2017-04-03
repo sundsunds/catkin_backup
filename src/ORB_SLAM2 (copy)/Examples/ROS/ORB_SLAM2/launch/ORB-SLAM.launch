@@ -1,0 +1,16 @@
+<launch>
+
+	<include 
+		file="$(find capture)/launch/capture_for_ORB.launch"
+	/>
+
+<!--
+	rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt my_stereo/MYSTEREO_openCV2.yaml true
+-->
+	<node
+		name="ORB_SLAM2" pkg="ORB_SLAM2" type="Stereo" args="$(find ORB_SLAM2)/../../../Vocabulary/ORBvoc.txt $(find ORB_SLAM2)/my_stereo/MYSTEREO_openCV2.yaml true" output="screen">
+	</node>
+	
+
+
+</launch>

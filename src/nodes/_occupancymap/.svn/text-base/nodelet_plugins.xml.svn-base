@@ -1,0 +1,5 @@
+<library path="lib/liboccupancy_map_nodelet">
+	<class name="occupancymap/OccupancyMapNodelet" type="occupancymap::OccupancyMapNodelet" base_class_type="nodelet::Nodelet">
+		<description>Nodelet for creating an occupancy map</description>
+	</class>
+</library>

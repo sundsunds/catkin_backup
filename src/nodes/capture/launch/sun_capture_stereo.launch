@@ -1,0 +1,21 @@
+<launch>
+	<arg name="autoShutterSettings" value="0.15,0.98,4" />
+	<!--<arg name="autoShutterSettings" value="0.10,0.98,4" />-->
+	<!-- <arg name="autoShutterSettings" value="0.12,0.98,4" /> -->
+	<!--arg name="autoShutterSettings" value="0.25,0.75,1.5" /-->
+	<!--def_raj arg name="autoShutterSettings" value="0.05,0.15,8" /-->
+
+	<node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"/>
+
+	<!-- <node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -d -a $(arg autoShutterSettings)" output="screen" />  raj  -s -H -a -g -->
+	<node pkg="nodelet" type="nodelet" name="CaptureNodelet" args="load capture/CaptureNodelet manager -s -H -a $(arg autoShutterSettings)" output="screen">
+
+             <!--param name="left_camera_filename" value="/home/sun/calibration_stereo/calib_front_left_17102015.yaml" />
+             <param name="right_camera_filename" value="/home/sun/calibration_stereo/calib_front_right_17102015.yaml" /-->
+
+	     <remap from="left_stereo_image" to="/front_stereo/left/image_rect"/>
+             <remap from="right_stereo_image" to="/front_stereo/right/image_rect"/>
+        </node>
+
+	<!--raj node pkg="capture" type="capture" name="capture" args="-s -a $(arg autoShutterSettings)" output="screen" /--> 
+</launch>

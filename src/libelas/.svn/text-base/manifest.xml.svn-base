@@ -1,0 +1,19 @@
+<package>
+	<description brief="libelas">
+
+		libelas
+
+	</description>
+	<author></author>
+	<license></license>
+	<review status="unreviewed" notes=""/>
+	<url></url>
+
+	<depend package="roscpp"/>
+	<depend package="opencv2"/>
+	
+	<export>
+		<cpp cflags="-I${prefix}/inc " lflags="-L${prefix}/lib -lelas"/>
+	</export>
+
+</package>

@@ -1,0 +1,87 @@
+<launch>
+	<!-- <arg name="calibFile" value="$(env HOME)/data/calib-current/front/calib.xml" /> -->
+	<!-- raj comment arg name="calibFile" value="$(env HOME)/data/rawseeds-5/calib/front/calib.xml" /-->
+	
+	<!-- raj comment arg name="calibFile" value="$(env HOME)/data/rawseeds-5/calib/front/calib.xml" /-->
+	<arg name="calibFile" value="$(find sparsestereo)/data/euroc.yaml" />
+
+	<!-- <arg name="calibFile" value="$(env HOME)/data/kitti/dataset/sequences/00/calib.xml" /> -->
+	
+	<!--raj include file="$(find densestereo)/launch/densestereo_offline.launch">
+		<arg name="calibFile" value="$(arg calibFile)" />
+	</include-->
+
+	<!-- <include file="$(find sparsestereo)/launch/sparsestereo_offline.launch">
+		<arg name="calibFile" value="$(arg calibFile)" />
+	</include> -->
+
+	<!-- <arg name="launchPrefix" value="gdb -ex run \-\-args" /> -->
+	<!-- <arg name="launchPrefix" value="gdb \-\-args" /> -->
+	<!-- <arg name="launchPrefix" value="valgrind" /> -->
+	<arg name="launchPrefix" value="" />
+
+	<node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen" launch-prefix="$(arg launchPrefix)"/>
+	<node pkg="nodelet" type="nodelet"
+		name="occupancymap"
+		args="load occupancymap/OccupancyMapNodelet manager" output="screen">
+		
+		<!-- stereo camera settings -->
+		<param name="calib_file" type="string" value="$(arg calibFile)" />
+		<param name="disparity_std_dev" type="double" value="0.3" />
+		<param name="max_disparity" type="int" value="96" />
+		<param name="subsampling_factor" type="int" value="2" />
+		
+		<!-- preprocessing settings -->
+		<!-- <param name="min_height" type="double" value="-0.6" /> -->
+		<param name="min_height" type="double" value="-0.4" />
+		<param name="max_height" type="double" value="1.2" />
+		<!-- <param name="min_height" type="double" value="-1e10" />
+		<param name="max_height" type="double" value="1e10" /> -->
+		
+		<!-- general octree parameters -->
+		<param name="octree_resolution" type="double" value="0.2" />
+		<param name="max_point_dist" type="double" value="10" />
+		<param name="voxel_error_resolution" type="double" value="0.05" />
+		<param name="occupancy_threshold" type="double" value="0.5" />
+		<param name="clamping_threshold_max" type="double" value="0.971" />
+		<param name="clamping_threshold_min" type="double" value="0.1192" />
+
+		<!-- sensor model for ordinary OctoMap -->
+		<param name="prob_hit" type="double" value="0.55" />
+		<param name="prob_miss" type="double" value="0.45" />
+
+		<!-- sensor model for our method -->
+		<param name="prob_hit_if_occupied" type="double" value="0.55" />
+		<param name="prob_hit_if_free" type="double" value="0.43" />
+		<param name="prob_hit_if_not_visible" type="double" value="0.05" />
+		<param name="prob_visible_if_occluded" type="double" value="0.2" />
+		<param name="prob_visible_if_not_occluded" type="double" value="1.0" />
+		
+		<!-- parameters for visibility -->
+		<param name="visibility_clamping_max" type="double" value="0.7" />
+		<param name="visibility_clamping_min" type="double" value="0.1" />
+
+		<!-- visualization -->
+		<param name="cv_window" type="boolean" value="false" />
+		<param name="sdl_window" type="boolean" value="false" />
+		<param name="octree_publish_interval" type="int" value="1" />
+		
+		<!-- File I/O -->
+		<param name="map_save_path" type="string" value="$(env HOME)/data/occupancymap.ot" />
+		<param name="map_load_path" type="string" value="" />
+		<!-- <param name="map_load_path" type="string" value="$(env HOME)/data/occupancymap_new_robust.ot" /> -->
+		<!-- <param name="map_load_path" type="string" value="$(env HOME)/data/occupancymap_octomap.ot" /> -->
+		<!-- <param name="offline_process_bag" type="string" value=""/> -->
+		<param name="offline_process_bag" type="string" value="/home/schauwecker/data/rawseeds-5/graphslam3.bag"/>
+		<!-- <param name="offline_process_bag" type="string" value="/home/schauwecker/data/kitti/00.bag"/> -->
+		<param name="bag_time_offset" type="double" value="0"/>
+		<!-- <param name="bag_time_offset" type="double" value="1419"/> -->
+		<!-- <param name="bag_time_offset" type="double" value="1559"/> -->
+		<!-- <param name="bag_time_offset" type="double" value="1561"/> -->
+		<!-- <param name="bag_replay_duration" type="double" value="60"/> -->
+		<param name="bag_replay_duration" type="double" value="-1"/>
+ 
+		<!-- others -->
+		<param name="world_frame" type="string" value="/world" />
+	</node>
+</launch>

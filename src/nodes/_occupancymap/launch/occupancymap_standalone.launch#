@@ -1,0 +1,91 @@
+<launch>
+	<arg name="calibFile" value="$(env HOME)/data/calib-current/front/calib.xml" />
+	
+	<include file="$(find densestereo)/launch/densestereo_offline.launch">
+		<arg name="calibFile" value="$(arg calibFile)" />
+	</include>
+
+	<!-- <include file="$(find sparsestereo)/launch/sparsestereo_offline.launch">
+		<arg name="calibFile" value="$(arg calibFile)" />
+	</include> -->
+
+	<!--<arg name="launchPrefix" value="gdb -ex run \-\-args" />-->
+	<!--<arg name="launchPrefix" value="gdb \-\-args" />-->
+	<!--<arg name="launchPrefix" value="valgrind" />-->
+	<arg name="launchPrefix" value="" />
+
+	<node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"/>
+	<node pkg="nodelet" type="nodelet"
+		name="occupancymap"
+		args="load occupancymap/OccupancyMapNodelet manager" output="screen" 
+		launch-prefix="$(arg launchPrefix)">
+		
+		<!-- stereo camera settings -->
+		<param name="calib_file" type="string" value="$(arg calibFile)" />
+		<param name="max_disparity" type="int" value="100" />
+		<param name="subsampling_factor" type="int" value="2" />
+		
+		<!-- preprocessing settings -->
+		<!-- <param name="min_height" type="double" value="0.3" />
+		<param name="max_height" type="double" value="2.0" /> -->
+		
+		<param name="min_height" type="double" value="-0.6" />
+		<param name="max_height" type="double" value="1.2" />
+		<!-- <param name="min_height" type="double" value="-1e10" />
+		<param name="max_height" type="double" value="1e10" /> -->
+		
+		<param name="corridor_size" type="double" value="-1" />
+		
+		<!-- general octree parameters -->
+		<param name="octree_resolution" type="double" value="0.2" />
+		<param name="max_point_dist" type="double" value="10" />
+		<param name="pruning_interval" type="int" value="5" />
+
+		<!-- sensor model -->
+		<param name="occupancy_threshold" type="double" value="0.5" />
+		
+		<!-- <param name="probability_hit" type="double" value="0.7" />
+		<param name="probability_miss" type="double" value="0.4" /> -->
+		
+		<!-- <param name="probability_hit" type="double" value="0.6" />
+		<param name="probability_miss" type="double" value="0.4" /> -->
+		
+		<!-- <param name="probability_hit" type="double" value="0.7" />
+		<param name="probability_miss" type="double" value="0.45" />
+		<param name="occupancy_visibility_prob" type="double" value="0" /> -->
+		
+		<param name="probability_hit" type="double" value="0.7" />
+		<param name="probability_miss" type="double" value="0.45" />
+		<param name="occupancy_visibility_prob" type="double" value="0.2" />
+	
+		<param name="clamping_threshold_max" type="double" value="0.971" />
+		<param name="clamping_threshold_min" type="double" value="0.1192" />
+		
+		<param name="visibility_clamping_max" type="double" value="0.7" />
+		<param name="visibility_clamping_min" type="double" value="0.1" />
+
+		<!-- Octomap update / postprocessing -->
+		<param name="single_voxel_update" type="boolean" value="true" />
+		<param name="remove_speckles" type="boolean" value="true" />
+		<param name="truncated_raycasting" type="boolean" value="true" />
+		<param name="min_pruning_age" type="int" value="5" />
+		<param name="min_occupied_observations" type="int" value="3" />
+
+		<!-- visualization -->
+		<param name="cv_window" type="boolean" value="false" />
+		<param name="sdl_window" type="boolean" value="true" />
+		<param name="octree_publish_interval" type="int" value="1" />
+		<param name="map_save_path" type="string" value="$(env HOME)/data/occupancymap.ot" />
+
+		<!-- others -->
+		<param name="world_frame" type="string" value="/world" />
+
+		<param name="offline_process_bag" type="string" value=""/>
+		<param name="offline_process_bag" type="string" value="/home/schauwecker/data/rawseeds-5/graphslam3.bag"/>
+		<!-- <param name="offline_process_bag" type="string" value="/home/schauwecker/data/rawseeds-5/ci_graph_slam.bag"/> -->
+		
+		<!-- <param name="bag_time_offset" type="double" value="0"/> -->
+		<!-- <param name="bag_time_offset" type="double" value="1419"/> -->
+		<param name="bag_time_offset" type="double" value="1559"/>
+	</node>
+</launch>

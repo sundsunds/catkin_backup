@@ -1,0 +1,15 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/home/sun/catkin_ws/src/eigen3.3.2/test/vectorization_logic.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "BuildOfficial" ],
+		"name" : "vectorization_logic_1"
+	}
+}

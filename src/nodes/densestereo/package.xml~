@@ -1,0 +1,32 @@
+<package>
+  <name>densestereo</name>
+  <version>0.0.1</version>
+  <description>capture</description>
+  <maintainer email="radouane.ait-jellal@uni-tuebingen.de"> Radouane Ait Jellal</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <!--build_depend>rosbag</build_depend-->
+  <build_depend>libks</build_depend>
+  <build_depend>libks_msgs</build_depend>
+  <build_depend>nodelet</build_depend>
+  <build_depend>opencv2</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>libelas</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <!--run_depend>rosbag</run_depend-->
+  <run_depend>nodelet</run_depend>
+  <run_depend>libks</run_depend>
+  <run_depend>libks_msgs</run_depend>
+  <run_depend>opencv2</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>libelas</run_depend>
+
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+  </export>
+</package>

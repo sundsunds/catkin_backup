@@ -1,0 +1,8 @@
+prefix=/home/sun/catkin_ws/install
+
+Name: libelas
+Description: Description of libelas
+Version: 0.0.1
+Cflags: -I/home/sun/catkin_ws/install/include
+Libs: -L/home/sun/catkin_ws/install/lib -lelas
+Requires: 

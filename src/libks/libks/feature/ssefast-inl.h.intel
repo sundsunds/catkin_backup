@@ -1,0 +1,75 @@
+#ifndef KS_SSEFAST_INL_H
+#define KS_SSEFAST_INL_H
+
+#include "libks/feature/ssefast.h"
+#include "libks/base/simd.h"
+
+namespace ks {
+	__always_inline v16qi SSEFast::loadCircleSSE(const cv::Mat_<char>& input, int x, int y) {
+		const char* center = &(input(y, x));
+		
+		v16qi circle = {*(center + offsets[0]), *(center + offsets[1]), *(center + offsets[2]), *(center + offsets[3]), 
+			*(center + offsets[4]), *(center + offsets[5]), *(center + offsets[6]), *(center + offsets[7]), 
+			*(center + offsets[8]), *(center + offsets[9]), *(center + offsets[10]), *(center + offsets[11]), 
+			*(center + offsets[12]), *(center + offsets[13]), *(center + offsets[14]), *(center + offsets[15]) 
+		};
+		
+		return circle;
+	}
+	
+	__always_inline unsigned char SSEFast::calcSingleScoreSSE(const v16qi& circle, v16qi center, const v16qi& bstartVec, unsigned char minLength) {
+		v16qi bmin = bstartVec;
+		v16qi bmax = const255;
+		v16qi b = _mm_avg_epu8(bmax, bmin);
+		center += const128; 
+		
+		//Compute the score using binary search
+		for(;;)
+		{
+			// Find brighter arc
+			v16qi centerPlus = (v16qi)_mm_adds_epu8(center, b) - const128;
+			int arcBrighter = _mm_movemask_epi8(_mm_cmpgt_epi8(circle, centerPlus));
+			
+			if(lookupTable[arcBrighter] >= minLength)
+				bmin = b; // corner
+			else {
+				// Find darker arc
+				v16qi centerMinus = (v16qi)_mm_subs_epu8(center, b) - const128;
+				int arcDarker = _mm_movemask_epi8(_mm_cmpgt_epi8(centerMinus, circle));
+				if(lookupTable[arcDarker] >= minLength)
+					bmin = b; // corner
+				else
+					bmax = b; // Not a corner
+			}
+			
+			unsigned char singleBMin = SIMD::element16(bmin, 0), singleBMax = SIMD::element16(bmax, 0);
+			if(singleBMin == singleBMax || singleBMin == singleBMax - 1)
+				return (unsigned char)SIMD::element16(bmin, 0);
+			
+			// Update threshold	
+			b = _mm_avg_epu8(bmax, bmin);
+		}
+	}
+	
+	__always_inline bool SSEFast::detectSingleCornerSSE(const v16qi& circle, const v16qi& center, const v16qi& threshold,
+		unsigned char minLength) {
+		
+		// Find longest brighter arc
+		v16qi centersPlus = _mm_adds_epi8(center, threshold);
+		int arcBrighter = _mm_movemask_epi8(_mm_cmpgt_epi8(circle, centersPlus));
+				
+		if(lookupTable[arcBrighter] >= minLength)
+			return true;
+		else {
+			// Find longest darker arc
+			v16qi centersMinus = _mm_subs_epi8(center, threshold);
+			int arcDarker = _mm_movemask_epi8(_mm_cmpgt_epi8(centersMinus, circle));
+			if(lookupTable[arcDarker] >= minLength)
+				return true;
+		}
+		
+		return false;
+	}
+}
+
+#endif

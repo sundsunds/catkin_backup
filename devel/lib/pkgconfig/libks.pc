@@ -1,0 +1,8 @@
+prefix=/home/sun/catkin_ws/devel
+
+Name: libks
+Description: Description of libks
+Version: 0.0.1
+Cflags: -I/home/sun/catkin_ws/src/libks -I/usr/include/SDL
+Libs: -L/home/sun/catkin_ws/devel/lib -lks
+Requires: 

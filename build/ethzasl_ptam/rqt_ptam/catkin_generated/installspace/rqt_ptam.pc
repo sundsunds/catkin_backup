@@ -1,0 +1,8 @@
+prefix=/home/sun/catkin_ws/install
+
+Name: rqt_ptam
+Description: Description of rqt_ptam
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/sun/catkin_ws/install/lib 
+Requires: 

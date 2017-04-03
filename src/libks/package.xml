@@ -1,0 +1,47 @@
+<package>
+  <name>libks</name>
+  <version>0.0.1</version>
+  <description>
+    libks
+  </description>
+  
+  <maintainer email="konstantin.schauwecker@uni-tuebingen.de">Konstanin Schauwecker</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>libelas</build_depend>
+  <build_depend>libks_msgs</build_depend>
+  <build_depend>opencv2</build_depend>
+  <build_depend>rosconsole</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>cmake_modules</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>libelas</run_depend>
+  <run_depend>libks_msgs</run_depend>
+  <run_depend>opencv2</run_depend>
+  <run_depend>rosconsole</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+
+
+  <export>
+       <!--cpp cflags="-I${prefix}" lflags="-L${prefix}/lib -lks"/-->
+       <!--cpp cflags="-I${prefix} -I${prefix}/msg_gen/cpp/include" lflags="-L${prefix}/lib -lks"/-->
+  </export>
+</package>
+
+
+
+
